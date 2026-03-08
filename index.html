@@ -1130,6 +1130,45 @@
     }
 
     /* ============================================
+       IFRAMES
+    ============================================ */
+    .browser-body iframe {
+      width: 100%;
+      border: none;
+      height: 600px;
+      display: block;
+    }
+
+    .mobile-iframe-wrapper {
+      position: relative;
+      width: 100%;
+      height: 580px;
+      overflow: hidden;
+    }
+
+    .mobile-iframe-wrapper iframe {
+      width: 375px;
+      height: 812px;
+      border: none;
+      transform: scale(0.63);
+      transform-origin: top left;
+    }
+
+    .reseau-iframe-wrapper {
+      margin-top: 24px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+    }
+
+    .reseau-iframe-wrapper iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      display: block;
+    }
+
+    /* ============================================
        SCROLL ANIMATIONS
     ============================================ */
     .reveal {
@@ -1187,6 +1226,14 @@
     }
 
     @media (max-width: 768px) {
+      .browser-body iframe {
+        height: 400px;
+      }
+
+      .reseau-iframe-wrapper iframe {
+        height: 300px;
+      }
+
       .features-grid,
       .process-steps {
         grid-template-columns: 1fr;
@@ -1324,7 +1371,7 @@
           </div>
         </div>
         <div class="browser-body">
-          <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769474244/home_hero_e74nqn.png" alt="My Pretty Family - Homepage">
+          <iframe src="https://myprettyfamily.com" title="My Pretty Family - Homepage" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -1826,22 +1873,13 @@
             <span style="display: inline-block; padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 2px solid transparent; background-image: linear-gradient(135deg, #6A8FB9, #8bb0d4), linear-gradient(135deg, #6A8FB9, #8bb0d4); background-origin: border-box; background-clip: content-box, border-box; color: white;">D&eacute;couvrir</span>
             <!-- White -->
             <span style="display: inline-block; padding: 14px 32px; background: white; color: #5a7fa9; border-radius: 50px; font-weight: 700; font-size: 14px;">Rejoindre</span>
-            <!-- Primary with icon (play) -->
-            <span style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: linear-gradient(90deg, #6A8FB9, #8bb0d4, #a8c5e0, #8bb0d4, #6A8FB9); background-size: 200% auto; color: white; border-radius: 50px; font-weight: 700; font-size: 14px; box-shadow: 0 8px 24px rgba(106,143,185,0.35);"><i class="fa-solid fa-play" style="font-size: 11px;"></i> Voir la vid&eacute;o</span>
           </div>
         </div>
         <div class="challenge-card">
-          <h3>Navigation</h3>
-          <p>Glassmorphism navbar with <code style="background: var(--gray-100); padding: 2px 6px; border-radius: 4px; font-size: 13px;">backdrop-filter: blur(12px)</code>, smooth scroll, and a branded mobile drawer.</p>
-          <div style="margin-top: 24px; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-radius: 12px; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(106,143,185,0.1); box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
-            <img src="https://myprettyfamily.com/assets/ui/logo_blue.png" alt="My Pretty Family" style="height: 48px; width: auto;">
-            <div style="display: flex; gap: 32px; font-family: 'Montserrat', sans-serif; font-size: 15px; color: #4a4a4a; font-weight: 500; align-items: center;">
-              <span>Le Concept</span>
-              <span>Les Clients</span>
-              <span>Le R&eacute;seau</span>
-              <span style="background: #6A8FB9; color: white; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600;">Devenir Partenaire</span>
-              <span style="width: 36px; height: 36px; background: #f8fafc; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #6A8FB9; font-size: 14px;"><i class="fa-solid fa-user"></i></span>
-            </div>
+          <h3>Carte du R&eacute;seau</h3>
+          <p>Une carte interactive permettant de localiser les boutiques My Pretty Family &agrave; travers l'Europe. Les visiteurs peuvent explorer le r&eacute;seau de partenaires en un coup d'&oelig;il.</p>
+          <div class="reseau-iframe-wrapper">
+            <iframe src="https://myprettyfamily.com/reseau" title="Carte du r&eacute;seau My Pretty Family" loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -1873,7 +1911,7 @@
               </div>
             </div>
             <div class="browser-body">
-              <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769474244/home_hero_e74nqn.png" alt="My Pretty Family - Desktop View">
+              <iframe src="https://myprettyfamily.com" title="My Pretty Family - Desktop View" loading="lazy"></iframe>
             </div>
           </div>
           <p style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--gray-400); font-weight: 500;">Desktop &mdash; 1440px</p>
@@ -1886,7 +1924,9 @@
             <div style="width: 100px; height: 28px; background: #1a1a1a; border-radius: 0 0 16px 16px; margin: 0 auto; position: relative; z-index: 2;"></div>
             <!-- Screen -->
             <div style="border-radius: 24px; overflow: hidden; background: white; margin-top: -14px;">
-              <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/c_fill,w_375,h_700,g_north/v1769474244/home_hero_e74nqn.png" alt="My Pretty Family - Mobile View" style="width: 100%; height: auto; display: block;">
+              <div class="mobile-iframe-wrapper">
+                <iframe src="https://myprettyfamily.com" title="My Pretty Family - Mobile View" loading="lazy"></iframe>
+              </div>
             </div>
           </div>
           <p style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--gray-400); font-weight: 500;">Mobile &mdash; 375px</p>
