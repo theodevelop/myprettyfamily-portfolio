@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Pretty Family — Case Study</title>
-  <meta name="description" content="UX/UI Design case study for My Pretty Family, a concept store dedicated to creating personalized illustrated family souvenirs.">
+  <title>My Pretty Family — Présentation du projet</title>
+  <meta name="description"
+    content="Présentation du projet de design UX/UI et développement web pour My Pretty Family, un concept store dédié à la création de souvenirs de famille illustrés personnalisés.">
+  <link rel="icon" type="image/png" href="https://myprettyfamily.com/assets/ui/logo_blue.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,7 +26,13 @@
     /* ============================================
        RESET & BASE
     ============================================ */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
       --primary: #6A8FB9;
@@ -51,7 +62,9 @@
       --section-px: clamp(24px, 5vw, 80px);
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--font-sans);
@@ -63,8 +76,16 @@
       overflow-x: hidden;
     }
 
-    img { max-width: 100%; height: auto; display: block; }
-    a { text-decoration: none; color: inherit; }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     /* ============================================
        UTILITY
@@ -85,8 +106,13 @@
       display: inline-block;
     }
 
-    .label--light { color: var(--primary-light); }
-    .label--dark { color: var(--gray-500); }
+    .label--light {
+      color: var(--primary-light);
+    }
+
+    .label--dark {
+      color: var(--gray-500);
+    }
 
     .section-title {
       font-family: var(--font-serif);
@@ -97,7 +123,9 @@
       margin-bottom: 24px;
     }
 
-    .section-title--white { color: var(--white); }
+    .section-title--white {
+      color: var(--white);
+    }
 
     .section-subtitle {
       font-size: clamp(16px, 1.8vw, 20px);
@@ -107,11 +135,17 @@
     }
 
     .section-subtitle--white {
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
     }
 
-    .text-center { text-align: center; }
-    .mx-auto { margin-left: auto; margin-right: auto; }
+    .text-center {
+      text-align: center;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     /* ============================================
        FULL-WIDTH PANEL (Behance style)
@@ -144,7 +178,9 @@
       color: var(--white);
     }
 
-    .panel--flush { padding: 0; }
+    .panel--flush {
+      padding: 0;
+    }
 
     /* ============================================
        HERO / COVER
@@ -210,8 +246,15 @@
     }
 
     @keyframes pulse-dot {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
     }
 
     .hero-logo {
@@ -236,7 +279,7 @@
 
     .hero-desc {
       font-size: clamp(16px, 1.8vw, 20px);
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       line-height: 1.7;
       max-width: 600px;
       margin: 0 auto 48px;
@@ -262,13 +305,13 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255, 255, 255, 0.4);
     }
 
     .hero-meta-value {
       font-size: 14px;
       font-weight: 500;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
     }
 
     .hero-scroll {
@@ -281,7 +324,7 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255, 255, 255, 0.3);
       font-size: 10px;
       font-weight: 600;
       text-transform: uppercase;
@@ -291,15 +334,29 @@
     .hero-scroll-line {
       width: 1px;
       height: 40px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
       animation: scroll-line 2s ease-in-out infinite;
     }
 
     @keyframes scroll-line {
-      0% { transform: scaleY(0); transform-origin: top; }
-      50% { transform: scaleY(1); transform-origin: top; }
-      51% { transform-origin: bottom; }
-      100% { transform: scaleY(0); transform-origin: bottom; }
+      0% {
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+
+      50% {
+        transform: scaleY(1);
+        transform-origin: top;
+      }
+
+      51% {
+        transform-origin: bottom;
+      }
+
+      100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+      }
     }
 
     /* ============================================
@@ -379,7 +436,7 @@
       background: var(--white);
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 25px 80px rgba(0,0,0,0.15), 0 8px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15), 0 8px 30px rgba(0, 0, 0, 0.08);
     }
 
     .browser-bar {
@@ -398,9 +455,17 @@
       background: var(--gray-300);
     }
 
-    .browser-dot:first-child { background: #ff5f57; }
-    .browser-dot:nth-child(2) { background: #febc2e; }
-    .browser-dot:nth-child(3) { background: #28c840; }
+    .browser-dot:first-child {
+      background: #ff5f57;
+    }
+
+    .browser-dot:nth-child(2) {
+      background: #febc2e;
+    }
+
+    .browser-dot:nth-child(3) {
+      background: #28c840;
+    }
 
     .browser-url {
       flex: 1;
@@ -675,8 +740,8 @@
     .feature-card {
       padding: 40px 32px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
@@ -708,7 +773,7 @@
 
     .feature-card p {
       font-size: 14px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       line-height: 1.7;
     }
 
@@ -759,7 +824,7 @@
     .page-card {
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
       border: 1px solid var(--gray-200);
       background: var(--white);
     }
@@ -803,7 +868,7 @@
       animation-direction: reverse;
     }
 
-    .gallery-row + .gallery-row {
+    .gallery-row+.gallery-row {
       margin-top: 16px;
     }
 
@@ -822,8 +887,13 @@
     }
 
     @keyframes scroll-gallery {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-280px * 11 - 16px * 11)); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-280px * 11 - 16px * 11));
+      }
     }
 
     /* ============================================
@@ -866,7 +936,7 @@
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid var(--white);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
@@ -898,7 +968,7 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       top: -200px;
       right: -200px;
     }
@@ -935,7 +1005,7 @@
 
     .result-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
     }
 
     .result-btn svg {
@@ -955,7 +1025,7 @@
       text-align: center;
       padding: 48px var(--section-px);
       background: var(--dark);
-      color: rgba(255,255,255,0.4);
+      color: rgba(255, 255, 255, 0.4);
       font-size: 13px;
     }
 
@@ -973,14 +1043,19 @@
     }
 
     .divider--dark {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
     }
 
     /* ============================================
        SPACER
     ============================================ */
-    .spacer { height: 60px; }
-    .spacer--lg { height: 100px; }
+    .spacer {
+      height: 60px;
+    }
+
+    .spacer--lg {
+      height: 100px;
+    }
 
     /* ============================================
        TWO COLUMN LAYOUT
@@ -992,8 +1067,13 @@
       align-items: center;
     }
 
-    .two-col--reverse .two-col-content { order: 2; }
-    .two-col--reverse .two-col-visual { order: 1; }
+    .two-col--reverse .two-col-content {
+      order: 2;
+    }
+
+    .two-col--reverse .two-col-visual {
+      order: 1;
+    }
 
     .two-col-content h3 {
       font-family: var(--font-serif);
@@ -1014,7 +1094,7 @@
     .two-col-visual {
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
     }
 
     .two-col-visual img {
@@ -1031,7 +1111,7 @@
       background: #000;
       border-radius: 44px;
       padding: 14px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
     }
 
     .phone-mockup-screen {
@@ -1072,7 +1152,7 @@
     }
 
     .section-number--dark {
-      color: rgba(255,255,255,0.03);
+      color: rgba(255, 255, 255, 0.03);
     }
 
     /* ============================================
@@ -1175,7 +1255,7 @@
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .reveal.visible {
@@ -1183,15 +1263,27 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
 
     /* ============================================
        RESPONSIVE
     ============================================ */
     @media (max-width: 1024px) {
+
       .overview-grid,
       .challenge-grid,
       .two-col,
@@ -1200,8 +1292,13 @@
         gap: 48px;
       }
 
-      .two-col--reverse .two-col-content { order: 1; }
-      .two-col--reverse .two-col-visual { order: 2; }
+      .two-col--reverse .two-col-content {
+        order: 1;
+      }
+
+      .two-col--reverse .two-col-visual {
+        order: 2;
+      }
 
       .features-grid {
         grid-template-columns: 1fr 1fr;
@@ -1273,6 +1370,7 @@
     /* Montserrat loaded in <head> */
   </style>
 </head>
+
 <body>
 
   <!-- ============================================
@@ -1282,20 +1380,21 @@
     <div class="hero-content reveal">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        Case Study
+        Présentation du Projet
       </div>
 
       <img src="https://myprettyfamily.com/assets/ui/logo_blue.png" alt="My Pretty Family" class="hero-logo">
 
       <h1>Designing a <span>Memorable</span> Experience</h1>
       <p class="hero-desc">
-        UX/UI Design & Web Development for a concept store dedicated to personalized illustrated family portraits.
+        Mission UI/UX Design & Développement web pour un concept store dédié aux portraits de famille illustrés
+        personnalisés.
       </p>
 
       <div class="hero-meta">
         <div class="hero-meta-item">
-          <span class="hero-meta-label">Role</span>
-          <span class="hero-meta-value">UX/UI Design & Dev</span>
+          <span class="hero-meta-label">Rôle</span>
+          <span class="hero-meta-value">UI/UX Design & Dev</span>
         </div>
         <div class="hero-meta-item">
           <span class="hero-meta-label">Year</span>
@@ -1307,7 +1406,8 @@
         </div>
         <div class="hero-meta-item">
           <span class="hero-meta-label">Live</span>
-          <span class="hero-meta-value"><a href="https://myprettyfamily.com" style="color: var(--primary-light);">myprettyfamily.com</a></span>
+          <span class="hero-meta-value"><a href="https://myprettyfamily.com"
+              style="color: var(--primary-light);">myprettyfamily.com</a></span>
         </div>
       </div>
     </div>
@@ -1327,10 +1427,13 @@
         <div class="overview-text">
           <span class="label">The Brief</span>
           <p>
-            My Pretty Family is a concept store where visitors create personalized illustrated portraits of their families, friends, or pets.
+            My Pretty Family is a concept store where visitors create personalized illustrated portraits of their
+            families, friends, or pets.
           </p>
           <p>
-            The challenge was to design a website that conveys the emotional, playful nature of the in-store experience while clearly presenting the franchise opportunity to potential partners. Every element needed to reflect the warmth and joy that defines the brand.
+            The challenge was to design a website that conveys the emotional, playful nature of the in-store experience
+            while clearly presenting the franchise opportunity to potential partners. Every element needed to reflect
+            the warmth and joy that defines the brand.
           </p>
         </div>
         <div class="overview-details">
@@ -1343,11 +1446,11 @@
             <p>4 Weeks</p>
           </div>
           <div class="overview-detail">
-            <h4>Deliverables</h4>
-            <p>Website Design<br>Responsive Dev<br>i18n System (7 lang)</p>
+            <h4>Périmètre</h4>
+            <p>Design d'interface<br>Développement Responsive<br>Système i18n (7 langues)</p>
           </div>
           <div class="overview-detail">
-            <h4>Live Site</h4>
+            <h4>Lien</h4>
             <p><a href="https://myprettyfamily.com" target="_blank">myprettyfamily.com &rarr;</a></p>
           </div>
         </div>
@@ -1366,7 +1469,11 @@
           <div class="browser-dot"></div>
           <div class="browser-dot"></div>
           <div class="browser-url">
-            <svg viewBox="0 0 16 16"><path d="M8 1a5 5 0 0 0-3.54 8.54l-1.9 1.9a.5.5 0 0 0 .71.71l1.9-1.9A5 5 0 1 0 8 1zm0 1a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" fill="currentColor"/></svg>
+            <svg viewBox="0 0 16 16">
+              <path
+                d="M8 1a5 5 0 0 0-3.54 8.54l-1.9 1.9a.5.5 0 0 0 .71.71l1.9-1.9A5 5 0 1 0 8 1zm0 1a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"
+                fill="currentColor" />
+            </svg>
             myprettyfamily.com
           </div>
         </div>
@@ -1415,7 +1522,8 @@
       <div class="challenge-grid">
         <div class="challenge-card reveal">
           <h3>The Challenge</h3>
-          <p>The website needed to serve a dual purpose: inspire potential franchise partners with the business opportunity, while showcasing the emotional customer experience that makes the concept unique.</p>
+          <p>The website needed to serve a dual purpose: inspire potential franchise partners with the business
+            opportunity, while showcasing the emotional customer experience that makes the concept unique.</p>
           <ul>
             <li>Translate an in-store tactile experience into a digital format</li>
             <li>Speak to two distinct audiences: partners & end customers</li>
@@ -1425,7 +1533,8 @@
         </div>
         <div class="challenge-card reveal reveal-delay-1">
           <h3>The Approach</h3>
-          <p>We centered the design around emotion and proof. Real customer photos, partner testimonials, and a video walkthrough replace typical corporate copy with authentic human moments.</p>
+          <p>We centered the design around emotion and proof. Real customer photos, partner testimonials, and a video
+            walkthrough replace typical corporate copy with authentic human moments.</p>
           <ul>
             <li>Emotion-first design: let real moments tell the story</li>
             <li>Progressive disclosure from concept to business details</li>
@@ -1445,7 +1554,8 @@
       <div class="text-center reveal" style="margin-bottom: 64px;">
         <span class="label">Process</span>
         <h2 class="section-title">Design Thinking Process</h2>
-        <p class="section-subtitle mx-auto">A structured approach from research to delivery, ensuring every decision is rooted in user needs and business goals.</p>
+        <p class="section-subtitle mx-auto">A structured approach from research to delivery, ensuring every decision is
+          rooted in user needs and business goals.</p>
       </div>
       <div class="process-steps">
         <div class="process-step reveal">
@@ -1509,7 +1619,8 @@
           </div>
           <div class="typo-specimen">
             <div class="typo-specimen-name">Character Set</div>
-            <div style="font-family: 'Montserrat'; font-size: 18px; color: var(--gray-600); letter-spacing: 0.05em; line-height: 2;">
+            <div
+              style="font-family: 'Montserrat'; font-size: 18px; color: var(--gray-600); letter-spacing: 0.05em; line-height: 2;">
               ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
               abcdefghijklmnopqrstuvwxyz<br>
               0123456789 &amp; ! ? @ # %
@@ -1528,7 +1639,8 @@
       <div class="text-center reveal" style="margin-bottom: 64px;">
         <span class="label">Visual Identity</span>
         <h2 class="section-title">Color Palette</h2>
-        <p class="section-subtitle mx-auto">A warm, trustworthy blue anchors the identity, complemented by clean neutrals that let the photography and illustrations shine.</p>
+        <p class="section-subtitle mx-auto">A warm, trustworthy blue anchors the identity, complemented by clean
+          neutrals that let the photography and illustrations shine.</p>
       </div>
       <div class="colors-grid reveal">
         <div class="color-card">
@@ -1606,14 +1718,16 @@
           </div>
         </div>
         <div class="color-card">
-          <div class="color-swatch color-swatch--gradient" style="background: linear-gradient(135deg, #6A8FB9 0%, #8bb0d4 50%, #6A8FB9 100%);"></div>
+          <div class="color-swatch color-swatch--gradient"
+            style="background: linear-gradient(135deg, #6A8FB9 0%, #8bb0d4 50%, #6A8FB9 100%);"></div>
           <div class="color-info">
             <div class="color-name">Gradient Primary</div>
             <div class="color-hex">135deg blend</div>
           </div>
         </div>
         <div class="color-card">
-          <div class="color-swatch color-swatch--gradient" style="background: linear-gradient(90deg, #6A8FB9, #8bb0d4, #a8c5e0, #8bb0d4, #6A8FB9);"></div>
+          <div class="color-swatch color-swatch--gradient"
+            style="background: linear-gradient(90deg, #6A8FB9, #8bb0d4, #a8c5e0, #8bb0d4, #6A8FB9);"></div>
           <div class="color-info">
             <div class="color-name">Gradient Animated</div>
             <div class="color-hex">90deg sweep</div>
@@ -1631,38 +1745,45 @@
       <div class="text-center reveal" style="margin-bottom: 64px;">
         <span class="label label--light">Key Features</span>
         <h2 class="section-title section-title--white">Designed with Purpose</h2>
-        <p class="section-subtitle section-subtitle--white mx-auto">Every feature was carefully considered to support both emotional engagement and business conversion.</p>
+        <p class="section-subtitle section-subtitle--white mx-auto">Every feature was carefully considered to support
+          both emotional engagement and business conversion.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card reveal">
           <div class="feature-icon"><i class="fa-solid fa-paintbrush"></i></div>
           <h4>Memory Creation UX</h4>
-          <p>The concept revolves around a creative experience where visitors compose personalized illustrated avatars of their family, friends, or pets.</p>
+          <p>The concept revolves around a creative experience where visitors compose personalized illustrated avatars
+            of their family, friends, or pets.</p>
         </div>
         <div class="feature-card reveal reveal-delay-1">
           <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
           <h4>7-Language i18n System</h4>
-          <p>A custom-built modular internationalization engine supporting French, English, Italian, Spanish, Portuguese, German, and Dutch.</p>
+          <p>A custom-built modular internationalization engine supporting French, English, Italian, Spanish,
+            Portuguese, German, and Dutch.</p>
         </div>
         <div class="feature-card reveal reveal-delay-2">
           <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
           <h4>Performance First</h4>
-          <p>Vanilla HTML/CSS/JS with zero framework overhead. Cloudinary CDN for media, WebP images, and optimized loading for mobile connections.</p>
+          <p>Vanilla HTML/CSS/JS with zero framework overhead. Cloudinary CDN for media, WebP images, and optimized
+            loading for mobile connections.</p>
         </div>
         <div class="feature-card reveal reveal-delay-1">
           <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
           <h4>Mobile-First Design</h4>
-          <p>Responsive architecture with custom mobile navigation, touch-friendly interactions, and fluid typography using CSS clamp().</p>
+          <p>Responsive architecture with custom mobile navigation, touch-friendly interactions, and fluid typography
+            using CSS clamp().</p>
         </div>
         <div class="feature-card reveal reveal-delay-2">
           <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
           <h4>Modern UI Effects</h4>
-          <p>Glassmorphism navigation, animated gradient buttons, parallax hero, scroll-reveal animations, and micro-interactions throughout.</p>
+          <p>Glassmorphism navigation, animated gradient buttons, parallax hero, scroll-reveal animations, and
+            micro-interactions throughout.</p>
         </div>
         <div class="feature-card reveal reveal-delay-3">
           <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
           <h4>Conversion-Oriented</h4>
-          <p>Strategic CTA placement, social proof sections, partner testimonials, and a clear path from discovery to franchise application.</p>
+          <p>Strategic CTA placement, social proof sections, partner testimonials, and a clear path from discovery to
+            franchise application.</p>
         </div>
       </div>
     </div>
@@ -1678,54 +1799,138 @@
     </div>
     <div class="gallery-section">
       <div class="gallery-row">
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473821/gallery_wall_qpe46s.webp" alt="Gallery Wall"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473826/ne_family_vpda_xhtwmq.jpg" alt="Family"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473790/avatar_selection_qfg12t.webp" alt="Avatar Selection"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473832/smiling_clients_milan_iiggzn.webp" alt="Smiling Clients"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473796/corner_milan_bshofy.webp" alt="Corner Milan"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473795/clients_discussion_bigqpi.webp" alt="Clients"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473792/cavalaire_tf0zcq.webp" alt="Cavalaire"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473789/annecy_bdqfcf.webp" alt="Annecy"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473833/smiling_couple_milan_iaqwzr.jpg" alt="Couple"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473836/smiling_men_milan_m4whkl.webp" alt="Clients"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473839/smiling_woman_client_kxt4qp.webp" alt="Client"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473821/gallery_wall_qpe46s.webp"
+            alt="Gallery Wall"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473826/ne_family_vpda_xhtwmq.jpg" alt="Family">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473790/avatar_selection_qfg12t.webp"
+            alt="Avatar Selection"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473832/smiling_clients_milan_iiggzn.webp"
+            alt="Smiling Clients"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473796/corner_milan_bshofy.webp"
+            alt="Corner Milan"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473795/clients_discussion_bigqpi.webp"
+            alt="Clients"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473792/cavalaire_tf0zcq.webp" alt="Cavalaire">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473789/annecy_bdqfcf.webp" alt="Annecy"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473833/smiling_couple_milan_iaqwzr.jpg"
+            alt="Couple"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473836/smiling_men_milan_m4whkl.webp"
+            alt="Clients"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473839/smiling_woman_client_kxt4qp.webp"
+            alt="Client"></div>
         <!-- Duplicates for infinite scroll -->
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473821/gallery_wall_qpe46s.webp" alt="Gallery Wall"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473826/ne_family_vpda_xhtwmq.jpg" alt="Family"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473790/avatar_selection_qfg12t.webp" alt="Avatar Selection"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473832/smiling_clients_milan_iiggzn.webp" alt="Smiling Clients"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473796/corner_milan_bshofy.webp" alt="Corner Milan"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473795/clients_discussion_bigqpi.webp" alt="Clients"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473792/cavalaire_tf0zcq.webp" alt="Cavalaire"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473789/annecy_bdqfcf.webp" alt="Annecy"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473833/smiling_couple_milan_iaqwzr.jpg" alt="Couple"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473836/smiling_men_milan_m4whkl.webp" alt="Clients"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473839/smiling_woman_client_kxt4qp.webp" alt="Client"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473821/gallery_wall_qpe46s.webp"
+            alt="Gallery Wall"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473826/ne_family_vpda_xhtwmq.jpg" alt="Family">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473790/avatar_selection_qfg12t.webp"
+            alt="Avatar Selection"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473832/smiling_clients_milan_iiggzn.webp"
+            alt="Smiling Clients"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473796/corner_milan_bshofy.webp"
+            alt="Corner Milan"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473795/clients_discussion_bigqpi.webp"
+            alt="Clients"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473792/cavalaire_tf0zcq.webp" alt="Cavalaire">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473789/annecy_bdqfcf.webp" alt="Annecy"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473833/smiling_couple_milan_iaqwzr.jpg"
+            alt="Couple"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473836/smiling_men_milan_m4whkl.webp"
+            alt="Clients"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473839/smiling_woman_client_kxt4qp.webp"
+            alt="Client"></div>
       </div>
       <div class="gallery-row gallery-row--reverse">
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473835/smiling_couple_milan_2_ex44ci.jpg" alt="Couple"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473841/smiling_women_milan_xe7eez.webp" alt="Women"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473822/happy_woman_milan_n3l3xn.webp" alt="Happy Woman"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473801/couple_vpda_jzqeg0.webp" alt="Couple"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473825/mother_daughter_vpda_ftjegq.webp" alt="Mother Daughter"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473812/family_vpda_j6hfxr.webp" alt="Family"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473813/family_vpda_2_rtqjik.webp" alt="Family"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473791/avatar_selection_vpda_udlcl4.webp" alt="Avatar Selection"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473807/cyclist_vpda_mw7l6c.webp" alt="Cyclists"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473793/chtis_vpda_w0bsi3.jpg" alt="Chtis"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473798/couple_kanoe_vpda_zfgvlp.webp" alt="Couple Canoe"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473835/smiling_couple_milan_2_ex44ci.jpg"
+            alt="Couple"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473841/smiling_women_milan_xe7eez.webp"
+            alt="Women"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473822/happy_woman_milan_n3l3xn.webp"
+            alt="Happy Woman"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473801/couple_vpda_jzqeg0.webp" alt="Couple">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473825/mother_daughter_vpda_ftjegq.webp"
+            alt="Mother Daughter"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473812/family_vpda_j6hfxr.webp" alt="Family">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473813/family_vpda_2_rtqjik.webp" alt="Family">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473791/avatar_selection_vpda_udlcl4.webp"
+            alt="Avatar Selection"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473807/cyclist_vpda_mw7l6c.webp" alt="Cyclists">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473793/chtis_vpda_w0bsi3.jpg" alt="Chtis"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473798/couple_kanoe_vpda_zfgvlp.webp"
+            alt="Couple Canoe"></div>
         <!-- Duplicates -->
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473835/smiling_couple_milan_2_ex44ci.jpg" alt="Couple"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473841/smiling_women_milan_xe7eez.webp" alt="Women"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473822/happy_woman_milan_n3l3xn.webp" alt="Happy Woman"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473801/couple_vpda_jzqeg0.webp" alt="Couple"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473825/mother_daughter_vpda_ftjegq.webp" alt="Mother Daughter"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473812/family_vpda_j6hfxr.webp" alt="Family"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473813/family_vpda_2_rtqjik.webp" alt="Family"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473791/avatar_selection_vpda_udlcl4.webp" alt="Avatar Selection"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473807/cyclist_vpda_mw7l6c.webp" alt="Cyclists"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473793/chtis_vpda_w0bsi3.jpg" alt="Chtis"></div>
-        <div class="gallery-thumb"><img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473798/couple_kanoe_vpda_zfgvlp.webp" alt="Couple Canoe"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473835/smiling_couple_milan_2_ex44ci.jpg"
+            alt="Couple"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473841/smiling_women_milan_xe7eez.webp"
+            alt="Women"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473822/happy_woman_milan_n3l3xn.webp"
+            alt="Happy Woman"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473801/couple_vpda_jzqeg0.webp" alt="Couple">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473825/mother_daughter_vpda_ftjegq.webp"
+            alt="Mother Daughter"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473812/family_vpda_j6hfxr.webp" alt="Family">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473813/family_vpda_2_rtqjik.webp" alt="Family">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473791/avatar_selection_vpda_udlcl4.webp"
+            alt="Avatar Selection"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473807/cyclist_vpda_mw7l6c.webp" alt="Cyclists">
+        </div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473793/chtis_vpda_w0bsi3.jpg" alt="Chtis"></div>
+        <div class="gallery-thumb"><img
+            src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473798/couple_kanoe_vpda_zfgvlp.webp"
+            alt="Couple Canoe"></div>
       </div>
     </div>
   </section>
@@ -1740,17 +1945,20 @@
           <span class="label">Copywriting Strategy</span>
           <h3>Words That Resonate, Not Just Inform</h3>
           <p>
-            The copy was crafted to mirror the emotional experience of the store. Instead of corporate language, we used warm, conversational tone that places the reader in the moment.
+            The copy was crafted to mirror the emotional experience of the store. Instead of corporate language, we used
+            warm, conversational tone that places the reader in the moment.
           </p>
           <p>
-            Headlines like "More than a portrait. An experience." immediately set the emotional context. Partner testimonials use direct quotes for authenticity, and CTAs are framed as invitations rather than commands.
+            Headlines like "More than a portrait. An experience." immediately set the emotional context. Partner
+            testimonials use direct quotes for authenticity, and CTAs are framed as invitations rather than commands.
           </p>
           <p>
             Every text element was translated into 7 languages with cultural adaptation, not just direct translation.
           </p>
         </div>
         <div class="two-col-visual">
-          <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473832/smiling_clients_milan_iiggzn.webp" alt="Happy Clients My Pretty Family">
+          <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473832/smiling_clients_milan_iiggzn.webp"
+            alt="Happy Clients My Pretty Family">
         </div>
       </div>
     </div>
@@ -1766,14 +1974,18 @@
           <span class="label">Information Architecture</span>
           <h3>From Curiosity to Commitment</h3>
           <p>
-            The site follows a deliberate narrative arc. The homepage builds from emotional hook (hero + video) to social proof (gallery + testimonials) to rational justification (concept details + partner benefits) to action (CTA + application).
+            The site follows a deliberate narrative arc. The homepage builds from emotional hook (hero + video) to
+            social proof (gallery + testimonials) to rational justification (concept details + partner benefits) to
+            action (CTA + application).
           </p>
           <p>
-            Secondary pages allow deeper exploration: the Concept page breaks down the in-store process, the Network page provides franchise details, and the Partner page streamlines the application flow.
+            Secondary pages allow deeper exploration: the Concept page breaks down the in-store process, the Network
+            page provides franchise details, and the Partner page streamlines the application flow.
           </p>
         </div>
         <div class="two-col-visual">
-          <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473795/clients_discussion_bigqpi.webp" alt="Clients discussing the experience">
+          <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473795/clients_discussion_bigqpi.webp"
+            alt="Clients discussing the experience">
         </div>
       </div>
     </div>
@@ -1787,7 +1999,8 @@
       <div class="text-center reveal" style="margin-bottom: 64px;">
         <span class="label">Technology</span>
         <h2 class="section-title">Built for Performance</h2>
-        <p class="section-subtitle mx-auto">A deliberately lightweight stack chosen for speed, reliability, and zero-dependency maintenance.</p>
+        <p class="section-subtitle mx-auto">A deliberately lightweight stack chosen for speed, reliability, and
+          zero-dependency maintenance.</p>
       </div>
       <div class="tech-row reveal">
         <div class="tech-item">
@@ -1834,16 +2047,31 @@
       <div class="reveal" style="margin-bottom: 48px;">
         <span class="label">Internationalization</span>
         <h2 class="section-title">One Site, Seven Languages</h2>
-        <p class="section-subtitle mx-auto">A custom-built modular translation system with culturally adapted copy for each market. Each page has its own translation module for maintainability.</p>
+        <p class="section-subtitle mx-auto">A custom-built modular translation system with culturally adapted copy for
+          each market. Each page has its own translation module for maintainability.</p>
       </div>
       <div class="i18n-flags reveal">
-        <div class="i18n-flag" title="Fran&ccedil;ais"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23002395' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23ED2939' x='2' width='1' height='2'/%3E%3C/svg%3E" alt="FR"></div>
-        <div class="i18n-flag" title="English"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='a'%3E%3Cpath d='M0 0v30h60V0z'/%3E%3C/clipPath%3E%3CclipPath id='b'%3E%3Cpath d='M30 15h30v15zv15H0zH0V0zV0h30z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M0 0v30h60V0z' fill='%23012169'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' clip-path='url(%23b)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E" alt="EN"></div>
-        <div class="i18n-flag" title="Italiano"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23009246' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23CE2B37' x='2' width='1' height='2'/%3E%3C/svg%3E" alt="IT"></div>
-        <div class="i18n-flag" title="Espa&ntilde;ol"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23c60b1e' width='3' height='2'/%3E%3Crect fill='%23ffc400' y='.5' width='3' height='1'/%3E%3C/svg%3E" alt="ES"></div>
-        <div class="i18n-flag" title="Portugu&ecirc;s"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23006600' width='1.2' height='2'/%3E%3Crect fill='%23FF0000' x='1.2' width='1.8' height='2'/%3E%3C/svg%3E" alt="PT"></div>
-        <div class="i18n-flag" title="Deutsch"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E%3Crect width='5' height='3' fill='%23FFCC00'/%3E%3Crect width='5' height='2' fill='%23DD0000'/%3E%3Crect width='5' height='1'/%3E%3C/svg%3E" alt="DE"></div>
-        <div class="i18n-flag" title="Nederlands"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3E%3Crect fill='%2321468B' width='9' height='6'/%3E%3Crect fill='%23fff' width='9' height='4'/%3E%3Crect fill='%23AE1C28' width='9' height='2'/%3E%3C/svg%3E" alt="NL"></div>
+        <div class="i18n-flag" title="Fran&ccedil;ais"><img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23002395' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23ED2939' x='2' width='1' height='2'/%3E%3C/svg%3E"
+            alt="FR"></div>
+        <div class="i18n-flag" title="English"><img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='a'%3E%3Cpath d='M0 0v30h60V0z'/%3E%3C/clipPath%3E%3CclipPath id='b'%3E%3Cpath d='M30 15h30v15zv15H0zH0V0zV0h30z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M0 0v30h60V0z' fill='%23012169'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' clip-path='url(%23b)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"
+            alt="EN"></div>
+        <div class="i18n-flag" title="Italiano"><img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23009246' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23CE2B37' x='2' width='1' height='2'/%3E%3C/svg%3E"
+            alt="IT"></div>
+        <div class="i18n-flag" title="Espa&ntilde;ol"><img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23c60b1e' width='3' height='2'/%3E%3Crect fill='%23ffc400' y='.5' width='3' height='1'/%3E%3C/svg%3E"
+            alt="ES"></div>
+        <div class="i18n-flag" title="Portugu&ecirc;s"><img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23006600' width='1.2' height='2'/%3E%3Crect fill='%23FF0000' x='1.2' width='1.8' height='2'/%3E%3C/svg%3E"
+            alt="PT"></div>
+        <div class="i18n-flag" title="Deutsch"><img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E%3Crect width='5' height='3' fill='%23FFCC00'/%3E%3Crect width='5' height='2' fill='%23DD0000'/%3E%3Crect width='5' height='1'/%3E%3C/svg%3E"
+            alt="DE"></div>
+        <div class="i18n-flag" title="Nederlands"><img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3E%3Crect fill='%2321468B' width='9' height='6'/%3E%3Crect fill='%23fff' width='9' height='4'/%3E%3Crect fill='%23AE1C28' width='9' height='2'/%3E%3C/svg%3E"
+            alt="NL"></div>
       </div>
     </div>
   </section>
@@ -1856,32 +2084,190 @@
       <div class="text-center reveal" style="margin-bottom: 64px;">
         <span class="label">Design System</span>
         <h2 class="section-title">Crafted Components</h2>
-        <p class="section-subtitle mx-auto">Consistent UI patterns create a cohesive experience across all pages: glassmorphism effects, pill-shaped CTAs, soft shadows, and rounded corners.</p>
+        <p class="section-subtitle mx-auto">Consistent UI patterns create a cohesive experience across all pages:
+          glassmorphism effects, pill-shaped CTAs, soft shadows, and rounded corners.</p>
       </div>
 
       <!-- Component showcase cards -->
-      <div class="challenge-grid reveal">
-        <div class="challenge-card" style="background: linear-gradient(135deg, #6A8FB9 0%, #8bb0d4 100%); border: none; color: white;">
-          <h3 style="color: white;">Buttons & CTAs</h3>
-          <p style="color: rgba(255,255,255,0.85);">Pill-shaped buttons with animated gradient backgrounds, a shine sweep effect on hover, and multiple contextual variants.</p>
-          <div style="display: flex; gap: 14px; margin-top: 24px; flex-wrap: wrap; align-items: center;">
-            <!-- Primary gradient -->
-            <span style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: linear-gradient(90deg, #6A8FB9, #8bb0d4, #a8c5e0, #8bb0d4, #6A8FB9); background-size: 200% auto; color: white; border-radius: 50px; font-weight: 700; font-size: 14px; box-shadow: 0 8px 24px rgba(106,143,185,0.35);">Rejoignez le r&eacute;seau <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i></span>
-            <!-- Secondary (transparent + white border) -->
-            <span style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: transparent; color: white; border-radius: 50px; font-weight: 600; font-size: 14px; border: 2px solid rgba(255,255,255,0.6);">En savoir plus <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i></span>
-            <!-- Outline gradient border -->
-            <span style="display: inline-block; padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 2px solid transparent; background-image: linear-gradient(135deg, #6A8FB9, #8bb0d4), linear-gradient(135deg, #6A8FB9, #8bb0d4); background-origin: border-box; background-clip: content-box, border-box; color: white;">D&eacute;couvrir</span>
-            <!-- White -->
-            <span style="display: inline-block; padding: 14px 32px; background: white; color: #5a7fa9; border-radius: 50px; font-weight: 700; font-size: 14px;">Rejoindre</span>
+      <div class="components-showcase reveal">
+        <style>
+          .components-showcase {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+
+          @media (min-width: 1024px) {
+            .components-showcase {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          .component-card {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+          }
+
+          .component-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+              linear-gradient(to right, var(--gray-100) 1px, transparent 1px),
+              linear-gradient(to bottom, var(--gray-100) 1px, transparent 1px);
+            background-size: 24px 24px;
+            z-index: 0;
+            opacity: 0.5;
+          }
+
+          .component-header,
+          .component-preview {
+            position: relative;
+            z-index: 1;
+          }
+
+          .component-header h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+          }
+
+          .component-header p {
+            color: var(--gray-500);
+            font-size: 15px;
+            line-height: 1.6;
+          }
+
+          .component-preview {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .btn-preview-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: linear-gradient(90deg, #6A8FB9, #8bb0d4, #a8c5e0, #8bb0d4, #6A8FB9);
+            background-size: 200% auto;
+            color: white;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 12px 30px rgba(106, 143, 185, 0.4);
+            transition: 0.4s;
+          }
+
+          .btn-preview-primary:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+          }
+
+          .btn-preview-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 30px;
+            background: transparent;
+            color: var(--primary-dark);
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid var(--primary);
+            transition: 0.3s;
+          }
+
+          .btn-preview-outline:hover {
+            background: rgba(106, 143, 185, 0.05);
+            transform: translateY(-2px);
+          }
+
+          /* Switcher UI */
+          .lang-switcher-ui {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            padding: 6px;
+            border-radius: 100px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--gray-200);
+          }
+
+          .lang-pill {
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-500);
+            border-radius: 100px;
+            cursor: pointer;
+            transition: 0.2s;
+          }
+
+          .lang-pill.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(106, 143, 185, 0.3);
+          }
+        </style>
+
+        <div class="component-card">
+          <div class="component-header">
+            <h3>Interactive Elements</h3>
+            <p>Pill-shaped actionable elements utilizing animated gradients and deep soft shadows to drive conversion
+              flows.</p>
+          </div>
+          <div class="component-preview">
+            <div class="btn-preview-primary">
+              Rejoindre le réseau <i class="fa-solid fa-arrow-right" style="font-size: 13px;"></i>
+            </div>
+            <div class="btn-preview-outline">
+              Découvrir
+            </div>
           </div>
         </div>
-        <div class="challenge-card">
-          <h3>Carte du R&eacute;seau</h3>
-          <p>Une carte interactive permettant de localiser les boutiques My Pretty Family &agrave; travers l'Europe. Les visiteurs peuvent explorer le r&eacute;seau de partenaires en un coup d'&oelig;il.</p>
-          <div class="reseau-iframe-wrapper">
-            <iframe src="https://myprettyfamily.com/reseau" title="Carte du r&eacute;seau My Pretty Family" loading="lazy"></iframe>
+
+        <div class="component-card">
+          <div class="component-header">
+            <h3>Navigational Elements</h3>
+            <p>Custom language switchers ensuring smooth global experience. Floating glassmorphism design adapted for
+              varying viewports.</p>
+          </div>
+          <div class="component-preview">
+            <div class="lang-switcher-ui">
+              <span class="lang-pill active">FR</span>
+              <span class="lang-pill">EN</span>
+              <span class="lang-pill">IT</span>
+            </div>
           </div>
         </div>
+
+        <div class="component-card" style="grid-column: 1 / -1; min-height: 500px; padding: 0;">
+          <div class="component-header"
+            style="position: absolute; top: 48px; left: 48px; max-width: 400px; background: rgba(255,255,255,0.9); padding: 24px; border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid var(--gray-200); z-index: 10;">
+            <h3>Carte du Réseau</h3>
+            <p>Interactive Mapbox integration allowing users to freely locate partner stores all around Europe in real
+              time.</p>
+          </div>
+          <iframe src="https://myprettyfamily.com/reseau" title="Carte du réseau My Pretty Family"
+            style="width: 100%; height: 100%; min-height: 500px; border: none; display: block;" loading="lazy"></iframe>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1894,10 +2280,12 @@
       <div class="text-center reveal" style="margin-bottom: 64px;">
         <span class="label">Responsive</span>
         <h2 class="section-title">Every Screen, Every Device</h2>
-        <p class="section-subtitle mx-auto">A fully responsive experience from 320px to 2560px &mdash; fluid typography, adaptive grids, and touch-optimized interactions.</p>
+        <p class="section-subtitle mx-auto">A fully responsive experience from 320px to 2560px &mdash; fluid typography,
+          adaptive grids, and touch-optimized interactions.</p>
       </div>
 
-      <div class="reveal" style="display: flex; align-items: flex-end; justify-content: center; gap: 48px; flex-wrap: wrap;">
+      <div class="reveal"
+        style="display: flex; align-items: flex-end; justify-content: center; gap: 48px; flex-wrap: wrap;">
         <!-- Desktop mockup -->
         <div style="flex: 1; min-width: min(400px, 100%); max-width: 720px;">
           <div class="browser-mockup">
@@ -1906,7 +2294,11 @@
               <div class="browser-dot"></div>
               <div class="browser-dot"></div>
               <div class="browser-url">
-                <svg viewBox="0 0 16 16"><path d="M8 1a5 5 0 0 0-3.54 8.54l-1.9 1.9a.5.5 0 0 0 .71.71l1.9-1.9A5 5 0 1 0 8 1zm0 1a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" fill="currentColor"/></svg>
+                <svg viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a5 5 0 0 0-3.54 8.54l-1.9 1.9a.5.5 0 0 0 .71.71l1.9-1.9A5 5 0 1 0 8 1zm0 1a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"
+                    fill="currentColor" />
+                </svg>
                 myprettyfamily.com
               </div>
             </div>
@@ -1914,22 +2306,81 @@
               <iframe src="https://myprettyfamily.com" title="My Pretty Family - Desktop View" loading="lazy"></iframe>
             </div>
           </div>
-          <p style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--gray-400); font-weight: 500;">Desktop &mdash; 1440px</p>
+          <p style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--gray-400); font-weight: 500;">
+            Desktop &mdash; 1440px</p>
         </div>
 
         <!-- Phone mockup -->
-        <div style="flex-shrink: 0; width: 260px;">
-          <div style="background: #1a1a1a; border-radius: 36px; padding: 12px; box-shadow: 0 25px 80px rgba(0,0,0,0.2), 0 8px 30px rgba(0,0,0,0.1);">
-            <!-- Dynamic Island -->
-            <div style="width: 100px; height: 28px; background: #1a1a1a; border-radius: 0 0 16px 16px; margin: 0 auto; position: relative; z-index: 2;"></div>
-            <!-- Screen -->
-            <div style="border-radius: 24px; overflow: hidden; background: white; margin-top: -14px;">
-              <div class="mobile-iframe-wrapper">
-                <iframe src="https://myprettyfamily.com" title="My Pretty Family - Mobile View" loading="lazy"></iframe>
+        <div style="flex-shrink: 0; width: 280px;">
+          <!-- iPhone Frame -->
+          <div style="
+            background: #000;
+            border-radius: 48px;
+            padding: 12px;
+            box-shadow:
+              inset 0 0 4px 2px rgba(255,255,255,0.2),
+              inset 0 0 0 6px #2a2a2a,
+              0 30px 60px -12px rgba(0,0,0,0.4),
+              0 18px 36px -18px rgba(0,0,0,0.5);
+            position: relative;
+            box-sizing: border-box;
+          ">
+            <!-- Hardware Buttons -->
+            <div
+              style="position: absolute; top: 120px; left: -2px; width: 3px; height: 26px; background: #2a2a2a; border-radius: 2px 0 0 2px;">
+            </div>
+            <div
+              style="position: absolute; top: 160px; left: -2px; width: 3px; height: 50px; background: #2a2a2a; border-radius: 2px 0 0 2px;">
+            </div>
+            <div
+              style="position: absolute; top: 220px; left: -2px; width: 3px; height: 50px; background: #2a2a2a; border-radius: 2px 0 0 2px;">
+            </div>
+            <div
+              style="position: absolute; top: 180px; right: -2px; width: 3px; height: 80px; background: #2a2a2a; border-radius: 0 2px 2px 0;">
+            </div>
+
+            <!-- Screen Area -->
+            <div style="
+              border-radius: 36px;
+              overflow: hidden;
+              background: #fff;
+              position: relative;
+              box-shadow: inset 0 0 0 2px #000;
+            ">
+              <!-- Dynamic Island -->
+              <div style="
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90px;
+                height: 26px;
+                background: #000;
+                border-radius: 20px;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 8px;
+              ">
+                <div
+                  style="width: 10px; height: 10px; border-radius: 50%; background: #111; box-shadow: inset -1px -1px 2px rgba(255,255,255,0.1);">
+                </div>
+                <div
+                  style="width: 10px; height: 10px; border-radius: 50%; background: #0c0c0c; box-shadow: inset -1px -1px 2px rgba(255,255,255,0.2); position: relative;">
+                  <div style="position: absolute; inset: 2px; background: #1a1a4a; border-radius: 50%;"></div>
+                </div>
+              </div>
+
+              <!-- content -->
+              <div class="mobile-iframe-wrapper" style="height: 600px;">
+                <iframe src="https://myprettyfamily.com" title="My Pretty Family - Mobile View" loading="lazy"
+                  style="width: 375px; height: 952px; border: none; transform: scale(0.682); transform-origin: top left;"></iframe>
               </div>
             </div>
           </div>
-          <p style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--gray-400); font-weight: 500;">Mobile &mdash; 375px</p>
+          <p style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--gray-400); font-weight: 500;">
+            iPhone 14 Pro &mdash; 375px</p>
         </div>
       </div>
     </div>
@@ -1942,11 +2393,16 @@
     <div class="container reveal">
       <h2>The Result</h2>
       <p>
-        A fast, emotional, and conversion-focused website that captures the warmth of the My Pretty Family experience — across 7 languages and every screen size.
+        A fast, emotional, and conversion-focused website that captures the warmth of the My Pretty Family experience —
+        across 7 languages and every screen size.
       </p>
       <a href="https://myprettyfamily.com" target="_blank" class="result-btn">
         Visit Live Site
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="m5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
       </a>
     </div>
   </section>
@@ -1955,7 +2411,7 @@
        FOOTER
   ============================================ -->
   <footer class="case-footer">
-    <p>&copy; 2025 &mdash; <span>My Pretty Family</span> Case Study</p>
+    <p>&copy; 2025 &mdash; <span>My Pretty Family</span> — Présentation du Projet</p>
   </footer>
 
   <!-- ============================================
@@ -1981,4 +2437,5 @@
   </script>
 
 </body>
+
 </html>
