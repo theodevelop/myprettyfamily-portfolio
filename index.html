@@ -2233,14 +2233,14 @@
           </div>
           <div class="component-preview">
             <div class="btn-preview-primary">
-              Join the network <i class="fa-solid fa-arrow-right" style="font-size: 13px;"></i>
+              Devenir partenaire <i class="fa-solid fa-arrow-right" style="font-size: 13px;"></i>
             </div>
             <div class="btn-preview-outline">
-              Discover
+              Découvrir le concept
             </div>
             <div class="btn-preview-primary"
               style="background: linear-gradient(90deg, #111827, #374151, #111827); color: white; display: inline-flex;">
-              Create your avatar <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 13px;"></i>
+              Découvrir en vidéo <i class="fa-solid fa-play" style="font-size: 13px;"></i>
             </div>
           </div>
         </div>
@@ -2251,15 +2251,22 @@
             <p>Custom language switchers ensuring smooth global experience. Floating glassmorphism design adapted for
               varying viewports.</p>
           </div>
-          <div class="component-preview">
-            <div class="lang-switcher-ui">
-              <span class="lang-pill active">FR</span>
-              <span class="lang-pill">EN</span>
-              <span class="lang-pill">IT</span>
-              <span class="lang-pill">ES</span>
-              <span class="lang-pill">PT</span>
-              <span class="lang-pill">DE</span>
-              <span class="lang-pill">NL</span>
+          <div class="component-preview" style="flex-direction: column; align-items: center; gap: 16px;">
+            <div class="lang-selector" style="position: relative; background: white; padding: 10px 20px; border-radius: 100px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); border: 1px solid var(--gray-200); display: flex; align-items: center; gap: 12px; cursor: pointer;">
+              <span class="lang-current-flag"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23002395' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23ED2939' x='2' width='1' height='2'/%3E%3C/svg%3E" alt="FR" style="width: 24px; height: 16px; border-radius: 2px; object-fit: cover;"></span>
+              <span class="lang-current-code" style="font-size: 15px; font-weight: 600; color: var(--gray-700);">FR</span>
+              <i class="fa-solid fa-chevron-down" style="font-size: 12px; color: var(--gray-400);"></i>
+            </div>
+            
+            <div class="lang-dropdown" style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.8); border-radius: 16px; padding: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 4px; width: 180px;">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; background: rgba(106, 143, 185, 0.15); color: var(--primary);">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23002395' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23ED2939' x='2' width='1' height='2'/%3E%3C/svg%3E" alt="FR" style="width: 20px; height: 14px; border-radius: 2px; object-fit: cover;">
+                <span style="font-size: 14px; font-weight: 600;">Français</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; color: var(--gray-600);">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='a'%3E%3Cpath d='M0 0v30h60V0z'/%3E%3C/clipPath%3E%3CclipPath id='b'%3E%3Cpath d='M30 15h30v15zv15H0zH0V0zV0h30z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M0 0v30h60V0z' fill='%23012169'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' clip-path='url(%23b)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E" alt="EN" style="width: 20px; height: 14px; border-radius: 2px; object-fit: cover;">
+                <span style="font-size: 14px; font-weight: 500;">English</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2271,8 +2278,8 @@
             <p>Interactive Mapbox integration allowing users to freely locate partner stores all around Europe in real
               time. Showcased through screenshots of the original interface.</p>
           </div>
-          <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473792/cavalaire_tf0zcq.webp"
-            alt="Map Interface Preview" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+          <img src="./map_screenshot.png"
+            alt="Map Interface Preview" style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
         </div>
 
       </div>
@@ -2353,7 +2360,11 @@
               background: #fff;
               position: relative;
               box-shadow: inset 0 0 0 2px #000;
+              transform: translateZ(0);
             ">
+              <!-- Internal overlay for border rendering above iframe -->
+              <div style="position: absolute; inset: 0; pointer-events: none; border-radius: 36px; box-shadow: inset 0 0 0 2px #000; z-index: 20;"></div>
+
               <!-- Dynamic Island -->
               <div style="
                 position: absolute;
