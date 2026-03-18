@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Pretty Family — Project Presentation</title>
+  <title>My Pretty Family — Case Study</title>
   <meta name="description"
-    content="UX/UI Design & Web Development project presentation for My Pretty Family, a concept store acting as a 'Memory Creator'.">
+    content="Case study complet : cadrage, architecture de l'information, UX/UI, système multilingue et implémentation technique pour My Pretty Family, concept store Memory Creator.">
   <link rel="icon" type="image/png" href="https://myprettyfamily.com/assets/ui/logo_blue.png">
 
   <!-- Fonts -->
@@ -1367,6 +1367,416 @@
       }
     }
 
+    /* ============================================
+       ROLE GRID
+    ============================================ */
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .role-item {
+      padding: 24px;
+      border-radius: 14px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+    }
+
+    .role-item-icon {
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .role-item-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 6px;
+    }
+
+    .role-item-desc {
+      font-size: 12px;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       DECISION CARDS (Choix UX)
+    ============================================ */
+    .decisions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .decision-card {
+      padding: 40px;
+      border-radius: 20px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--primary);
+    }
+
+    .decision-card-number {
+      font-family: var(--font-serif);
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--gray-100);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .decision-card h4 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .decision-card p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--gray-600);
+    }
+
+    /* ============================================
+       INSIGHT BLOCK
+    ============================================ */
+    .insight-block {
+      padding: 28px 32px;
+      background: var(--primary-ghost);
+      border-radius: 16px;
+      border-left: 4px solid var(--primary);
+      margin: 32px 0;
+    }
+
+    .insight-block p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--gray-800);
+      font-style: italic;
+    }
+
+    /* ============================================
+       AUDIENCE CARDS (Parcours)
+    ============================================ */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .audience-card {
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid var(--gray-200);
+    }
+
+    .audience-card--client {
+      background: linear-gradient(145deg, var(--primary-ghost), var(--white));
+      border-color: var(--primary-pale);
+    }
+
+    .audience-card--partner {
+      background: var(--white);
+    }
+
+    .audience-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .audience-card h3 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+
+    .audience-context {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--gray-500);
+      margin-bottom: 16px;
+      line-height: 1.6;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .audience-card p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--gray-600);
+      margin-bottom: 14px;
+    }
+
+    .audience-journey {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      border: 1px solid var(--gray-200);
+    }
+
+    .audience-journey strong {
+      color: var(--primary-dark);
+    }
+
+    /* ============================================
+       FUNNEL
+    ============================================ */
+    .funnel {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .funnel-step {
+      padding: 16px 24px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+    }
+
+    .funnel-step-number {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .funnel-step-content {
+      font-size: 14px;
+      color: var(--gray-700);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .funnel-step-content span {
+      display: block;
+      font-size: 12px;
+      color: var(--gray-400);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .funnel-arrow {
+      display: flex;
+      justify-content: center;
+      padding: 4px 0;
+      color: var(--gray-300);
+      font-size: 18px;
+    }
+
+    /* ============================================
+       SEO PILLARS
+    ============================================ */
+    .seo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .seo-card {
+      padding: 40px;
+      border-radius: 20px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+    }
+
+    .seo-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--primary-ghost);
+      color: var(--primary);
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .seo-card h4 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .seo-card p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--gray-600);
+    }
+
+    /* ============================================
+       ARBITRAGE CARDS (Difficultés)
+    ============================================ */
+    .arbitrage-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .arbitrage-card {
+      padding: 48px;
+      border-radius: 20px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+    }
+
+    .arbitrage-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(106, 143, 185, 0.1);
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .arbitrage-card h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 16px;
+    }
+
+    .arbitrage-card-problem {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+
+    .arbitrage-solution {
+      padding: 24px;
+      background: var(--gray-50);
+      border-radius: 12px;
+      border-left: 3px solid var(--primary);
+    }
+
+    .arbitrage-solution-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .arbitrage-solution p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--gray-700);
+    }
+
+    /* ============================================
+       REFLECTION PANEL
+    ============================================ */
+    .reflection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .reflection-point {
+      padding: 32px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .reflection-point h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .reflection-point p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================
+       DENSE TEXT SECTION
+    ============================================ */
+    .dense-text p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--gray-600);
+      margin-bottom: 20px;
+    }
+
+    .dense-text p:first-of-type {
+      font-size: 20px;
+      color: var(--gray-800);
+      font-weight: 400;
+    }
+
+    /* ============================================
+       RESPONSIVE — NOUVEAUX COMPOSANTS
+    ============================================ */
+    @media (max-width: 1024px) {
+      .decisions-grid,
+      .audience-grid,
+      .seo-grid,
+      .reflection-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .role-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .decision-card,
+      .arbitrage-card,
+      .audience-card,
+      .seo-card {
+        padding: 28px;
+      }
+    }
+
     /* Montserrat loaded in <head> */
   </style>
 </head>
@@ -1380,31 +1790,31 @@
     <div class="hero-content reveal">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        Project Presentation
+        Case Study — Projet complet
       </div>
 
       <img src="https://myprettyfamily.com/assets/ui/logo_blue.png" alt="My Pretty Family" class="hero-logo">
 
-      <h1>Designing a <span>Memorable</span> Experience</h1>
+      <h1>Concevoir un système web <span>de bout en bout</span></h1>
       <p class="hero-desc">
-        UI/UX Design & Web Development mission for a concept store acting as a true memory creator.
+        De la stratégie à la mise en production : architecture de l'information, UX/UI, système multilingue 7 langues et implémentation technique pour My Pretty Family.
       </p>
 
       <div class="hero-meta">
         <div class="hero-meta-item">
-          <span class="hero-meta-label">Role</span>
-          <span class="hero-meta-value">UI/UX Design & Dev</span>
+          <span class="hero-meta-label">Rôle</span>
+          <span class="hero-meta-value">Lead Design & Dev</span>
         </div>
         <div class="hero-meta-item">
-          <span class="hero-meta-label">Year</span>
+          <span class="hero-meta-label">Année</span>
           <span class="hero-meta-value">2025</span>
         </div>
         <div class="hero-meta-item">
-          <span class="hero-meta-label">Industry</span>
-          <span class="hero-meta-value">Retail / Tourism</span>
+          <span class="hero-meta-label">Secteur</span>
+          <span class="hero-meta-value">Retail / Tourisme</span>
         </div>
         <div class="hero-meta-item">
-          <span class="hero-meta-label">Live</span>
+          <span class="hero-meta-label">Livrable</span>
           <span class="hero-meta-value"><a href="https://myprettyfamily.com"
               style="color: var(--primary-light);">myprettyfamily.com</a></span>
         </div>
@@ -1423,16 +1833,13 @@
   <section class="panel panel--white">
     <div class="container">
       <div class="overview-grid reveal">
-        <div class="overview-text">
-          <span class="label">The Brief</span>
+        <div class="overview-text dense-text">
+          <span class="label">Vue d'ensemble</span>
           <p>
-            My Pretty Family is a "Memory Creator" concept store where visitors craft personalized experiences for their
-            families, friends, or pets.
+            My Pretty Family est un réseau de concept stores spécialisés dans la création de portraits personnalisés : des avatars illustrés à l'image des clients, réalisés en quelques minutes sur les points de vente. Le modèle est pensé pour les lieux à fort passage touristique — galeries commerciales dans des stations balnéaires, centres-villes historiques, destinations européennes comme Milan ou Annecy.
           </p>
           <p>
-            The challenge was to design a website that conveys the emotional, playful nature of the in-store experience
-            while clearly presenting the franchise opportunity to potential partners. Every element needed to reflect
-            the warmth and joy that defines the brand.
+            La mission couvrait l'intégralité du cycle de conception, du cadrage stratégique à la mise en production : architecture de l'information, parcours utilisateur, design UI/UX, développement front-end, système multilingue 7 langues, formulaire de conversion, responsive, SEO on-page et déploiement. Pas de délégation, pas d'outil tiers pour la structure : un travail de fond, de la première ligne de réflexion au dernier commit.
           </p>
         </div>
         <div class="overview-details">
@@ -1441,15 +1848,15 @@
             <p>My Pretty Family</p>
           </div>
           <div class="overview-detail">
-            <h4>Timeline</h4>
-            <p>4 Weeks</p>
+            <h4>Durée</h4>
+            <p>4 semaines</p>
           </div>
           <div class="overview-detail">
-            <h4>Scope</h4>
-            <p>UI Design<br>Responsive Dev<br>i18n System (7 languages)</p>
+            <h4>Périmètre</h4>
+            <p>Cadrage · IA · UX/UI<br>Dev front-end · i18n<br>SEO · Déploiement</p>
           </div>
           <div class="overview-detail">
-            <h4>Link</h4>
+            <h4>Site live</h4>
             <p><a href="https://myprettyfamily.com" target="_blank">myprettyfamily.com &rarr;</a></p>
           </div>
         </div>
@@ -1491,19 +1898,19 @@
       <div class="stats-row">
         <div class="stat">
           <div class="stat-value">250K+</div>
-          <div class="stat-label">Portraits Created</div>
+          <div class="stat-label">Portraits créés</div>
         </div>
         <div class="stat">
           <div class="stat-value">7</div>
-          <div class="stat-label">Languages Supported</div>
+          <div class="stat-label">Langues conçues</div>
         </div>
         <div class="stat">
           <div class="stat-value">9</div>
-          <div class="stat-label">Pages Designed</div>
+          <div class="stat-label">Pages architecturées</div>
         </div>
         <div class="stat">
           <div class="stat-value">100</div>
-          <div class="stat-label">Lighthouse Score</div>
+          <div class="stat-label">Score Lighthouse</div>
         </div>
       </div>
     </div>
@@ -1515,30 +1922,28 @@
   <section class="panel panel--white">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 64px;">
-        <span class="label">Strategy</span>
-        <h2 class="section-title">Challenge & Approach</h2>
+        <span class="label">Contexte & Problématique</span>
+        <h2 class="section-title">Une marque forte sans présence digitale à la hauteur</h2>
       </div>
       <div class="challenge-grid">
         <div class="challenge-card reveal">
-          <h3>The Challenge</h3>
-          <p>The website needed to serve a dual purpose: inspire potential franchise partners with the business
-            opportunity, while showcasing the emotional customer experience that makes the concept unique.</p>
+          <h3>Le contexte</h3>
+          <p>My Pretty Family existait physiquement dans plusieurs destinations touristiques européennes, avec une expérience en magasin forte et émotionnelle. Mais la marque ne disposait pas d'un site web cohérent avec ce positionnement.</p>
           <ul>
-            <li>Translate an in-store tactile experience into a digital format</li>
-            <li>Speak to two distinct audiences: partners & end customers</li>
-            <li>Operate across 7 languages for international tourist locations</li>
-            <li>Build trust quickly with a conversion-oriented structure</li>
+            <li>Aucun site ne transmettait l'émotion de l'expérience en magasin</li>
+            <li>Deux publics cibles radicalement différents à adresser simultanément</li>
+            <li>Des lieux d'implantation dans plusieurs pays européens, une clientèle internationale</li>
+            <li>Un moment de découverte souvent impulsif : le visiteur voit le stand, sort son téléphone</li>
           </ul>
         </div>
         <div class="challenge-card reveal reveal-delay-1">
-          <h3>The Approach</h3>
-          <p>We centered the design around emotion and proof. Real customer photos, partner testimonials, and a video
-            walkthrough replace typical corporate copy with authentic human moments.</p>
+          <h3>La problématique centrale</h3>
+          <p>Concevoir un site qui serve deux logiques opposées sans les diluer : l'émotion pour les clients, la crédibilité pour les franchisés, dans sept langues, avec des performances mobiles irréprochables.</p>
           <ul>
-            <li>Emotion-first design: let real moments tell the story</li>
-            <li>Progressive disclosure from concept to business details</li>
-            <li>Mobile-first responsive architecture for on-the-go visitors</li>
-            <li>Lightweight vanilla stack for maximum performance</li>
+            <li>Un site trop émotionnel ne convainc pas un investisseur rationnel</li>
+            <li>Un site trop corporate n'inspire pas un client en vacances</li>
+            <li>Le multilinguisme ne peut pas être une couche tardive — c'est une contrainte d'architecture</li>
+            <li>La performance mobile n'est pas optionnelle dans un contexte de tourisme</li>
           </ul>
         </div>
       </div>
@@ -1548,188 +1953,186 @@
   <!-- ============================================
        UX PROCESS
   ============================================ -->
+  <!-- ============================================
+       OBJECTIFS DU SITE
+  ============================================ -->
   <section class="panel panel--gray">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 64px;">
-        <span class="label">Process</span>
-        <h2 class="section-title">Design Thinking Process</h2>
-        <p class="section-subtitle mx-auto">A structured approach from research to delivery, ensuring every decision is
-          rooted in user needs and business goals.</p>
+        <span class="label">Objectifs du site</span>
+        <h2 class="section-title">Quatre missions, une seule architecture</h2>
+        <p class="section-subtitle mx-auto">Avant de concevoir quoi que ce soit, j'ai défini ce que le site devait accomplir. Ces objectifs ont ensuite dicté chaque décision structurelle et visuelle.</p>
       </div>
       <div class="process-steps">
         <div class="process-step reveal">
           <div class="process-step-number">01</div>
-          <h4>Discovery</h4>
-          <p>Understanding the brand DNA, market positioning, and audience behavior in tourist locations.</p>
+          <h4>Donner envie avant d'informer</h4>
+          <p>Transmettre l'émotion de l'expérience en magasin en moins de dix secondes. Le visiteur doit ressentir la valeur du concept avant de lire un seul argument.</p>
         </div>
         <div class="process-step reveal reveal-delay-1">
           <div class="process-step-number">02</div>
-          <h4>Architecture</h4>
-          <p>Defining information hierarchy, user flows, and page structure for optimal conversion.</p>
+          <h4>Qualifier les deux audiences</h4>
+          <p>Permettre au client final de comprendre rapidement l'expérience, et au franchisé potentiel de trouver les informations dont il a besoin pour passer à l'étape suivante.</p>
         </div>
         <div class="process-step reveal reveal-delay-2">
           <div class="process-step-number">03</div>
-          <h4>Visual Design</h4>
-          <p>Crafting the visual identity system: typography, colors, components, and interaction patterns.</p>
+          <h4>Convertir à l'action</h4>
+          <p>Générer des candidatures partenaires qualifiées via le formulaire, et orienter les clients vers les points de vente du réseau — deux conversions distinctes, un seul système.</p>
         </div>
         <div class="process-step reveal reveal-delay-3">
           <div class="process-step-number">04</div>
-          <h4>Development</h4>
-          <p>Building a performant, responsive, and multilingual website with modern CSS effects.</p>
+          <h4>Opérer à l'international</h4>
+          <p>Fonctionner en 7 langues avec une qualité de contenu identique dans chaque marché, et une performance mobile irréprochable dans un contexte de réseau touristique variable.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       TYPOGRAPHY SHOWCASE
+       MON RÔLE & PÉRIMÈTRE
   ============================================ -->
   <section class="panel panel--white">
     <div class="container">
-      <div class="typo-showcase reveal">
-        <div class="typo-left">
-          <span class="label">Typography</span>
-          <h2 style="font-family: 'Montserrat', sans-serif;">Mont<span>serrat</span></h2>
+      <div class="reveal" style="margin-bottom: 64px; max-width: 700px;">
+        <span class="label">Rôle & Périmètre</span>
+        <h2 class="section-title">Ownership total, de la stratégie au déploiement</h2>
+        <p class="section-subtitle">Ce projet ne comportait pas de séparation entre la conception et l'exécution. J'ai pris en charge l'ensemble du périmètre — ce qui n'est pas un détail, mais la condition pour que les décisions restent cohérentes d'un bout à l'autre.</p>
+      </div>
+      <div class="role-grid reveal">
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div class="role-item-label">Cadrage stratégique</div>
+          <div class="role-item-desc">Définition des objectifs, des audiences cibles et des critères de succès avant toute décision de design</div>
         </div>
-        <div class="typo-right">
-          <div class="typo-specimen">
-            <div class="typo-specimen-name">Primary Typeface</div>
-            <div class="typo-specimen-sample typo-specimen-sample--montserrat">
-              Montserrat
-            </div>
-            <div class="typo-weights">
-              <div class="typo-weight">
-                <span class="typo-weight-preview" style="font-family: 'Montserrat'; font-weight: 400;">Aa</span>
-                <span class="typo-weight-label">Regular</span>
-              </div>
-              <div class="typo-weight">
-                <span class="typo-weight-preview" style="font-family: 'Montserrat'; font-weight: 500;">Aa</span>
-                <span class="typo-weight-label">Medium</span>
-              </div>
-              <div class="typo-weight">
-                <span class="typo-weight-preview" style="font-family: 'Montserrat'; font-weight: 600;">Aa</span>
-                <span class="typo-weight-label">SemiBold</span>
-              </div>
-              <div class="typo-weight">
-                <span class="typo-weight-preview" style="font-family: 'Montserrat'; font-weight: 700;">Aa</span>
-                <span class="typo-weight-label">Bold</span>
-              </div>
-            </div>
-          </div>
-          <div class="typo-specimen">
-            <div class="typo-specimen-name">Character Set</div>
-            <div
-              style="font-family: 'Montserrat'; font-size: 18px; color: var(--gray-600); letter-spacing: 0.05em; line-height: 2;">
-              ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-              abcdefghijklmnopqrstuvwxyz<br>
-              0123456789 &amp; ! ? @ # %
-            </div>
-          </div>
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-sitemap"></i></div>
+          <div class="role-item-label">Architecture de l'information</div>
+          <div class="role-item-desc">Hiérarchie des pages, arborescence, logique de navigation et structure du contenu</div>
+        </div>
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-route"></i></div>
+          <div class="role-item-label">UX & parcours utilisateur</div>
+          <div class="role-item-desc">Conception des flux par audience, logique de conversion et stratégie CTA</div>
+        </div>
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-palette"></i></div>
+          <div class="role-item-label">UI & design system</div>
+          <div class="role-item-desc">Identité visuelle, système de composants, typographie, palette et patterns d'interaction</div>
+        </div>
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="role-item-label">Système multilingue</div>
+          <div class="role-item-desc">Conception de l'architecture i18n, implémentation des 7 langues avec structure SSG</div>
+        </div>
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="role-item-label">Développement front-end</div>
+          <div class="role-item-desc">HTML, CSS et JavaScript vanilla — zéro framework, performance maximale</div>
+        </div>
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="role-item-label">SEO on-page</div>
+          <div class="role-item-desc">Structure sémantique, métadonnées, hreflang, Core Web Vitals et Lighthouse 100</div>
+        </div>
+        <div class="role-item">
+          <div class="role-item-icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="role-item-label">Déploiement</div>
+          <div class="role-item-desc">Configuration Netlify, CDN edge, DNS et mise en production continue depuis Git</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       COLOR PALETTE
+       DÉMARCHE DE TRAVAIL
   ============================================ -->
   <section class="panel panel--gray">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 64px;">
-        <span class="label">Visual Identity</span>
-        <h2 class="section-title">Color Palette</h2>
-        <p class="section-subtitle mx-auto">A warm, trustworthy blue anchors the identity, complemented by clean
-          neutrals that let the photography and illustrations shine.</p>
+        <span class="label">Méthode de travail</span>
+        <h2 class="section-title">Structurer avant de créer</h2>
+        <p class="section-subtitle mx-auto">Une approche descendante : les objectifs définissent la structure, la structure dicte le design, le design guide le développement. Chaque étape est une contrainte pour la suivante.</p>
       </div>
-      <div class="colors-grid reveal">
-        <div class="color-card">
-          <div class="color-swatch" style="background: #6A8FB9;"></div>
-          <div class="color-info">
-            <div class="color-name">Primary</div>
-            <div class="color-hex">#6A8FB9</div>
-          </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="process-step-number">01</div>
+          <h4>Comprendre avant de concevoir</h4>
+          <p>Analyse de la marque, du modèle économique, des audiences et des contextes d'usage. Identification des tensions structurelles : double audience, mobile impulsif, multilingue obligatoire.</p>
         </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #5a7fa9;"></div>
-          <div class="color-info">
-            <div class="color-name">Primary Dark</div>
-            <div class="color-hex">#5A7FA9</div>
-          </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-step-number">02</div>
+          <h4>Définir la structure narrative</h4>
+          <p>L'arborescence a été construite à partir des objectifs business, pas des contenus disponibles. Chaque page a reçu un rôle précis dans le funnel de conversion avant qu'on parle de design.</p>
         </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #8bb0d4;"></div>
-          <div class="color-info">
-            <div class="color-name">Primary Light</div>
-            <div class="color-hex">#8BB0D4</div>
-          </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-step-number">03</div>
+          <h4>Concevoir les parcours avant les interfaces</h4>
+          <p>Définition de comment chaque profil utilisateur devait traverser le site, et quels déclencheurs — émotionnels ou rationnels — allaient faciliter ses décisions. L'interface est venue ensuite.</p>
         </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #a8c5e0;"></div>
-          <div class="color-info">
-            <div class="color-name">Primary Lighter</div>
-            <div class="color-hex">#A8C5E0</div>
-          </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-step-number">04</div>
+          <h4>Construire le système, pas les pages</h4>
+          <p>Palette, typographie, espacement, composants : un design system construit d'abord, qui garantit la cohérence sur les 9 pages et facilite les évolutions futures sans risquer de casser l'ensemble.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="process-step-number">05</div>
+          <h4>Implémenter avec rigueur</h4>
+          <p>Développement fidèle au design system, avec la performance comme contrainte constante : chaque ligne de JavaScript, chaque image, chaque requête HTTP a été évaluée à l'aune de son coût réel.</p>
         </div>
       </div>
-      <div class="colors-grid--secondary reveal" style="margin-top: 24px;">
-        <div class="color-card">
-          <div class="color-swatch" style="background: #1a1a1a;"></div>
-          <div class="color-info">
-            <div class="color-name">Dark</div>
-            <div class="color-hex">#1A1A1A</div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ARCHITECTURE DE L'INFORMATION
+  ============================================ -->
+  <section class="panel panel--white">
+    <div class="container">
+      <div class="two-col reveal">
+        <div class="two-col-content">
+          <span class="label">Architecture de l'information</span>
+          <h3>Une arborescence construite par objectif, pas par contenu</h3>
+          <p>
+            Le site est structuré en 9 pages distinctes, chacune avec un rôle défini dans le parcours de conversion. La tentation habituelle est de construire l'arborescence à partir des contenus disponibles. J'ai fait l'inverse : partir des objectifs et de ce que chaque type d'utilisateur devait pouvoir accomplir, puis déduire les pages nécessaires.
+          </p>
+          <p>
+            La page d'accueil est le seul point d'entrée commun aux deux audiences. Elle suit un arc narratif délibéré : ancrage émotionnel → preuve sociale → compréhension rationnelle → appel à l'action. Cet ordre n'est pas arbitraire — il correspond à la psychologie de la décision : on fait d'abord rêver, puis on rassure, puis on donne les preuves, puis on propose d'agir.
+          </p>
+          <p>
+            Les pages secondaires permettent l'exploration approfondie selon l'intention détectée. La page Concept détaille l'expérience pour les curieux. La page Réseau avec carte interactive répond au client qui veut trouver un point de vente. La page Partenaires structure l'argumentaire franchise pour l'investisseur. Chaque page a une seule raison d'exister et un seul CTA principal.
+          </p>
+          <div class="insight-block" style="margin-top: 0;">
+            <p>La navigation principale n'expose que 4 liens — volontairement. Moins d'options, c'est moins de dispersion, plus de clarté sur le chemin à prendre, et un guidage implicite vers les pages à forte valeur de conversion.</p>
           </div>
         </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #4a4a4a;"></div>
-          <div class="color-info">
-            <div class="color-name">Body Text</div>
-            <div class="color-hex">#4A4A4A</div>
+        <div class="two-col-visual" style="background: var(--gray-50); border-radius: 20px; padding: 40px; box-shadow: none; display: flex; flex-direction: column; gap: 12px;">
+          <div style="text-align: center; margin-bottom: 8px;">
+            <span class="label label--dark">Arborescence</span>
           </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #f8fafc;"></div>
-          <div class="color-info">
-            <div class="color-name">Background</div>
-            <div class="color-hex">#F8FAFC</div>
+          <!-- Accueil -->
+          <div style="display: flex; justify-content: center;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--primary); color: white; border-radius: 10px; font-size: 14px; font-weight: 700;">
+              <i class="fa-solid fa-house" style="font-size: 12px;"></i> Accueil
+            </div>
           </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #f0f4f8;"></div>
-          <div class="color-info">
-            <div class="color-name">Surface</div>
-            <div class="color-hex">#F0F4F8</div>
+          <div style="display: flex; justify-content: center; color: var(--gray-300); font-size: 18px;">↓</div>
+          <!-- Niveau 1 -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+            <div style="padding: 10px 16px; background: var(--primary-ghost); border: 1px solid var(--primary-pale); border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--primary-dark);">Concept</div>
+            <div style="padding: 10px 16px; background: var(--primary-ghost); border: 1px solid var(--primary-pale); border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--primary-dark);">Réseau</div>
+            <div style="padding: 10px 16px; background: var(--primary-ghost); border: 1px solid var(--primary-pale); border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--primary-dark);">Partenaires</div>
+            <div style="padding: 10px 16px; background: var(--primary-ghost); border: 1px solid var(--primary-pale); border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--primary-dark);">Contact</div>
           </div>
-        </div>
-      </div>
-      <div class="colors-grid--secondary reveal" style="margin-top: 24px;">
-        <div class="color-card">
-          <div class="color-swatch" style="background: #f5b800;"></div>
-          <div class="color-info">
-            <div class="color-name">Accent Gold</div>
-            <div class="color-hex">#F5B800</div>
+          <div style="display: flex; justify-content: center; color: var(--gray-300); font-size: 18px;">↓</div>
+          <!-- Niveau 2 -->
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+            <div style="padding: 8px 14px; background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; font-size: 12px; color: var(--gray-600);">FAQ</div>
+            <div style="padding: 8px 14px; background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; font-size: 12px; color: var(--gray-600);">Carte interactive</div>
+            <div style="padding: 8px 14px; background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; font-size: 12px; color: var(--gray-600);">Formulaire franchise</div>
+            <div style="padding: 8px 14px; background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; font-size: 12px; color: var(--gray-600);">Mentions légales</div>
           </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch" style="background: #b46464;"></div>
-          <div class="color-info">
-            <div class="color-name">Negative</div>
-            <div class="color-hex">#B46464</div>
-          </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch color-swatch--gradient"
-            style="background: linear-gradient(135deg, #6A8FB9 0%, #8bb0d4 50%, #6A8FB9 100%);"></div>
-          <div class="color-info">
-            <div class="color-name">Gradient Primary</div>
-            <div class="color-hex">135deg blend</div>
-          </div>
-        </div>
-        <div class="color-card">
-          <div class="color-swatch color-swatch--gradient"
-            style="background: linear-gradient(90deg, #6A8FB9, #8bb0d4, #a8c5e0, #8bb0d4, #6A8FB9);"></div>
-          <div class="color-info">
-            <div class="color-name">Gradient Animated</div>
-            <div class="color-hex">90deg sweep</div>
+          <div style="margin-top: 16px; padding: 16px; background: var(--white); border-radius: 10px; border: 1px solid var(--gray-200); font-size: 12px; color: var(--gray-500); line-height: 1.7;">
+            <strong style="color: var(--gray-700);">×7 langues</strong> — chaque page génère ses variantes linguistiques en URLs dédiées (/en/, /it/, /es/…)
           </div>
         </div>
       </div>
@@ -1737,52 +2140,123 @@
   </section>
 
   <!-- ============================================
-       KEY FEATURES (on dark)
+       PARCOURS UTILISATEUR & CONVERSION
   ============================================ -->
-  <section class="panel panel--gradient">
+  <section class="panel panel--gray">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 64px;">
-        <span class="label label--light">Key Features</span>
-        <h2 class="section-title section-title--white">Designed with Purpose</h2>
-        <p class="section-subtitle section-subtitle--white mx-auto">Every feature was carefully considered to support
-          both emotional engagement and business conversion.</p>
+        <span class="label">Parcours utilisateur</span>
+        <h2 class="section-title">Deux audiences, une entrée commune, des sorties différenciées</h2>
+        <p class="section-subtitle mx-auto">La difficulté n'était pas de créer deux sites séparés, mais d'articuler deux discours opposés sur une même architecture sans créer de confusion pour aucun des deux profils.</p>
       </div>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-paintbrush"></i></div>
-          <h4>Memory Creation UX</h4>
-          <p>The concept revolves around a creative experience where visitors compose personalized illustrated avatars
-            of their family, friends, or pets.</p>
+      <div class="audience-grid reveal">
+        <div class="audience-card audience-card--client">
+          <div class="audience-icon"><i class="fa-solid fa-camera"></i></div>
+          <h3>Le client en vacances</h3>
+          <p class="audience-context">Famille à Annecy ou Milan, voit le stand My Pretty Family dans une galerie, sort son téléphone pour chercher l'enseigne. Contexte : curiosité + émotion + très peu de temps.</p>
+          <p>Son besoin est immédiat : comprendre en quelques secondes ce qu'on fait ici, voir des exemples réels, et trouver le point de vente le plus proche. Il n'a pas de patience pour la lecture longue — il veut de l'image, de l'émotion, de la clarté.</p>
+          <p>Les décisions UX pour ce profil : hero visuel fort avec déclencheur émotionnel immédiat, galerie en défilement automatique pour capter l'attention, navigation minimale pour ne pas disperser, page Réseau accessible en deux clics avec carte visible dès l'arrivée.</p>
+          <div class="audience-journey">
+            <strong>Parcours type :</strong> Recherche Google → Accueil (hero + galerie) → Réseau (carte) → Point de vente
+          </div>
         </div>
-        <div class="feature-card reveal reveal-delay-1">
-          <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
-          <h4>7-Language i18n System</h4>
-          <p>A custom-built modular internationalization engine supporting French, English, Italian, Spanish,
-            Portuguese, German, and Dutch.</p>
+        <div class="audience-card audience-card--partner">
+          <div class="audience-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Le partenaire potentiel</h3>
+          <p class="audience-context">Entrepreneur ou investisseur ayant entendu parler du concept via un salon franchise ou un réseau pro. Contexte : évaluation rationnelle, scepticisme raisonné, besoin de données.</p>
+          <p>Son besoin est différent : comprendre le modèle économique, évaluer la solidité du réseau, estimer le retentissement de la marque, et trouver un point de contact. Il lit davantage, il compare, il a besoin d'être rassuré par des preuves concrètes.</p>
+          <p>Les décisions UX pour ce profil : CTA "Devenir partenaire" permanent dans la navigation desktop, section dédiée en homepage, page Partenaires avec argumentaire structuré (avantages, accompagnement, témoignages), formulaire court et direct.</p>
+          <div class="audience-journey">
+            <strong>Parcours type :</strong> Accueil (preuve de marque) → Partenaires (argumentaire) → Formulaire de candidature
+          </div>
         </div>
-        <div class="feature-card reveal reveal-delay-2">
-          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h4>Performance First</h4>
-          <p>Vanilla HTML/CSS/JS with zero framework overhead. Cloudinary CDN for media, WebP images, and optimized
-            loading for mobile connections.</p>
+      </div>
+
+      <div class="reveal" style="margin-top: 64px;">
+        <div class="text-center" style="margin-bottom: 40px;">
+          <span class="label label--dark">Funnel de conversion — Homepage</span>
+          <h3 class="section-title" style="font-size: clamp(24px, 3vw, 36px);">L'arc narratif de la page d'accueil</h3>
         </div>
-        <div class="feature-card reveal reveal-delay-1">
-          <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-          <h4>Mobile-First Design</h4>
-          <p>Responsive architecture with custom mobile navigation, touch-friendly interactions, and fluid typography
-            using CSS clamp().</p>
+        <div class="funnel">
+          <div class="funnel-step">
+            <div class="funnel-step-number">1</div>
+            <div class="funnel-step-content">Ancrage émotionnel
+              <span>Hero + vidéo — déclencher le désir avant tout discours</span>
+            </div>
+          </div>
+          <div class="funnel-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="funnel-step">
+            <div class="funnel-step-number">2</div>
+            <div class="funnel-step-content">Preuve sociale
+              <span>250K+ portraits réels — la marque existe, les gens aiment</span>
+            </div>
+          </div>
+          <div class="funnel-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="funnel-step">
+            <div class="funnel-step-number">3</div>
+            <div class="funnel-step-content">Compréhension rationnelle
+              <span>Comment fonctionne l'expérience, chiffres du réseau</span>
+            </div>
+          </div>
+          <div class="funnel-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="funnel-step">
+            <div class="funnel-step-number">4</div>
+            <div class="funnel-step-content">Légitimité & témoignages partenaires
+              <span>Réduire les objections, instaurer la confiance</span>
+            </div>
+          </div>
+          <div class="funnel-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="funnel-step">
+            <div class="funnel-step-number">5</div>
+            <div class="funnel-step-content">Appel à l'action
+              <span>CTA franchise + CTA trouver un point de vente — deux sorties selon l'intention</span>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal reveal-delay-2">
-          <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h4>Modern UI Effects</h4>
-          <p>Glassmorphism navigation, animated gradient buttons, parallax hero, scroll-reveal animations, and
-            micro-interactions throughout.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CHOIX UX — POURQUOI CES DÉCISIONS
+  ============================================ -->
+  <section class="panel panel--white">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 64px;">
+        <span class="label">Logique UX</span>
+        <h2 class="section-title">Cinq décisions qui structurent l'expérience</h2>
+        <p class="section-subtitle mx-auto">Chaque choix UX répond à une tension identifiée en phase de cadrage. Aucun n'est là pour faire "bien" — chacun résout un problème précis.</p>
+      </div>
+      <div class="decisions-grid reveal">
+        <div class="decision-card">
+          <div class="decision-card-number">01</div>
+          <h4>Progressive disclosure — ne pas tout montrer en même temps</h4>
+          <p>Le site ne présente pas immédiatement les détails franchise. Il installe d'abord l'émotion, puis distille progressivement les informations rationnelles. Ce choix réduit la friction pour les deux audiences : le client n'est pas noyé dans du business, le partenaire est d'abord convaincu par la force de la marque avant d'évaluer le modèle.</p>
         </div>
-        <div class="feature-card reveal reveal-delay-3">
-          <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h4>Conversion-Oriented</h4>
-          <p>Strategic CTA placement, social proof sections, partner testimonials, and a clear path from discovery to
-            franchise application.</p>
+        <div class="decision-card">
+          <div class="decision-card-number">02</div>
+          <h4>Mobile-first par conviction, pas par convention</h4>
+          <p>Le contexte d'usage principal — touristes dans des lieux de passage — implique une découverte quasi systématiquement sur téléphone. J'ai conçu l'expérience mobile en premier, puis adapté en desktop, et non l'inverse. Résultat concret : navigation en overlay ¾ screen, CTAs accessibles sans zoom, typographie lisible sans pinch-to-zoom.</p>
+        </div>
+        <div class="decision-card">
+          <div class="decision-card-number">03</div>
+          <h4>CTA hiérarchisés selon l'audience et le moment</h4>
+          <p>Il n'existe pas de CTA universel. La page d'accueil propose des boutons différents selon la position dans la page et l'intention probable : "Découvrir le concept" pour ceux qui arrivent, "Devenir partenaire" pour ceux qui évaluent. Cette hiérarchie évite le paradoxe du choix et dirige sans imposer. Le CTA franchise est toujours visible en navigation desktop — on ne rate jamais l'opportunité de conversion.</p>
+        </div>
+        <div class="decision-card">
+          <div class="decision-card-number">04</div>
+          <h4>La preuve sociale avant l'argumentaire</h4>
+          <p>Avant tout discours marketing, le site montre de vraies personnes, de vraies émotions, de vrais portraits. La galerie défilante de 250K+ portraits n'est pas décorative : c'est la preuve la plus convaincante de la valeur du concept. Le format "défilement automatique infini" crée une impression de masse sans forcer l'attention — on peut regarder, ou pas.</p>
+        </div>
+        <div class="decision-card">
+          <div class="decision-card-number">05</div>
+          <h4>Navigation minimaliste et délibérément limitée</h4>
+          <p>Quatre liens dans la navigation principale. Ce choix force la clarté : chaque page mérite d'être visitée parce qu'elle a une raison d'exister. Il n'y a pas de page remplissage, pas de rubrique "vague". Moins d'options, c'est moins de dispersion — et plus de guidage implicite vers les pages à forte valeur de conversion.</p>
+        </div>
+        <div class="decision-card">
+          <div class="decision-card-number">06</div>
+          <h4>Effets visuels fonctionnels, pas décoratifs</h4>
+          <p>Le glassmorphism de la navigation permet de rester visible sur n'importe quel fond — hero vidéo, photos couleur — sans masquer le contenu. Les animations scroll-reveal sont calibrées pour ajouter de la fluidité sans ralentir la perception. Chaque effet répond à une fonction. S'il n'a pas de rôle, il n'a pas sa place.</p>
         </div>
       </div>
     </div>
@@ -1935,156 +2409,200 @@
   </section>
 
   <!-- ============================================
-       UX DEEP DIVE — Copywriting
+       UI / INTERFACE — LE DESIGN COMME OUTIL
   ============================================ -->
   <section class="panel panel--white">
     <div class="container">
       <div class="two-col reveal">
         <div class="two-col-content">
-          <span class="label">Copywriting Strategy</span>
-          <h3>Words That Resonate, Not Just Inform</h3>
+          <span class="label">UI & Interface</span>
+          <h3>Le design comme outil de clarté, pas comme décoration</h3>
           <p>
-            The copy was crafted to mirror the emotional experience of the store. Instead of corporate language, we used
-            warm, conversational tone that places the reader in the moment.
+            Chaque décision visuelle répond à une logique. La typographie principale — Montserrat — a été choisie pour sa géométrie régulière et sa hauteur de x élevée, qui garantissent une excellente lisibilité dans les sept langues supportées, y compris pour les caractères spéciaux (ç, ñ, ü, ã). Dans un contexte multilingue, une typographie trop stylisée crée des problèmes d'affichage. Montserrat résiste à ces contraintes.
           </p>
           <p>
-            Headlines like "More than a portrait. An experience." immediately set the emotional context. Partner
-            testimonials use direct quotes for authenticity, and CTAs are framed as invitations rather than commands.
+            Le bleu primaire (#6A8FB9) n'est pas simplement une couleur de marque : c'est un signal sémantique. Ce ton — entre le bleu institutionnel et le bleu aquatique — évoque simultanément la confiance pour les partenaires et la détente touristique pour les clients. Les tonalités secondaires progressivement délavées créent de la profondeur sans alourdir la palette ni ajouter de nouvelles couleurs à gérer.
           </p>
           <p>
-            Every text element was translated into 7 languages with cultural adaptation, not just direct translation.
+            Toutes les décisions visuelles sont systématisées dans un design system : échelle de typographie, niveaux d'ombre, border-radius, courbes d'animation, espacement. Ce système garantit la cohérence entre 9 pages développées séquentiellement, et permet de modifier n'importe quel élément sans risquer de casser la cohérence globale.
           </p>
         </div>
         <div class="two-col-visual">
           <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473832/smiling_clients_milan_iiggzn.webp"
-            alt="Happy Clients My Pretty Family">
+            alt="Clients My Pretty Family — Milan">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       UX DEEP DIVE — Information Architecture
+       UI — CONTENU & COPYWRITING
   ============================================ -->
   <section class="panel panel--gray">
     <div class="container">
       <div class="two-col two-col--reverse reveal">
         <div class="two-col-content">
-          <span class="label">Information Architecture</span>
-          <h3>From Curiosity to Commitment</h3>
+          <span class="label">Contenu & Copywriting</span>
+          <h3>Des textes qui installent l'émotion avant d'informer</h3>
           <p>
-            The site follows a deliberate narrative arc. The homepage builds from emotional hook (hero + video) to
-            social proof (gallery + testimonials) to rational justification (concept details + partner benefits) to
-            action (CTA + application).
+            Le copywriting suit la même logique que l'architecture : on ne commence pas par les arguments, on commence par l'émotion. Les titres de section ne décrivent pas ce qu'on voit — ils placent le lecteur dans une expérience. "Plus qu'un portrait. Un souvenir." pose le registre émotionnel avant tout argument rationnel.
           </p>
           <p>
-            Secondary pages allow deeper exploration: the Concept page breaks down the in-store process, the Network
-            page provides franchise details, and the Partner page streamlines the application flow.
+            Les témoignages partenaires sont présentés en citations directes, pas reformulés. Les CTAs sont formulés comme des invitations plutôt que des injonctions. Cette attention au ton n'est pas un détail de rédaction — c'est ce qui différencie un site qui inspire d'un site qui liste des fonctionnalités.
+          </p>
+          <p>
+            Chaque texte a ensuite été adapté dans les 7 langues — pas traduit mot pour mot, mais réécrit pour conserver le registre émotionnel dans chaque langue cible. Une traduction littérale du français en néerlandais donne souvent un résultat froid et maladroit. L'adaptation culturelle est une partie à part entière de la conception.
           </p>
         </div>
         <div class="two-col-visual">
           <img src="https://res.cloudinary.com/dlsyd2icz/image/upload/v1769473795/clients_discussion_bigqpi.webp"
-            alt="Clients discussing the experience">
+            alt="Clients My Pretty Family">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       TECH STACK
+       IMPLÉMENTATION TECHNIQUE
   ============================================ -->
   <section class="panel panel--white">
     <div class="container">
-      <div class="text-center reveal" style="margin-bottom: 64px;">
-        <span class="label">Technology</span>
-        <h2 class="section-title">Built for Performance</h2>
-        <p class="section-subtitle mx-auto">A deliberately lightweight stack chosen for speed, reliability, and
-          zero-dependency maintenance.</p>
-      </div>
-      <div class="tech-row reveal">
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-brands fa-html5" style="color: #E34F26;"></i></div>
-          <div class="tech-item-name">HTML5</div>
+      <div class="two-col reveal">
+        <div class="two-col-content">
+          <span class="label">Implémentation technique</span>
+          <h3>Vanilla, délibérément — la performance comme contrainte de conception</h3>
+          <p>
+            Le choix de ne pas utiliser de framework JavaScript n'est pas un retard technologique : c'est une décision architecturale. Pour un site vitrine de 9 pages, React ou Vue ajoutent une complexité qui n'apporte aucune valeur fonctionnelle et dégrade mécaniquement les scores de performance. Zéro framework, c'est zéro bundle inutile, zéro hydration, zéro overhead côté client.
+          </p>
+          <p>
+            CSS Custom Properties centralisent toutes les valeurs de design — palette, typographie, espacement — en tokens réutilisables. <code>CSS clamp()</code> gère la typographie et les espacements fluides sans media queries systématiques : les layouts s'adaptent en continu, pas par sauts. Le résultat est une cohérence visuelle parfaite à toutes les tailles d'écran.
+          </p>
+          <p>
+            Cloudinary gère la livraison des médias : conversion automatique en WebP, redimensionnement adaptatif selon le viewport, CDN global. Les images restent visuellement impeccables tout en étant optimisées à la source — c'est ce qui permet de tenir un score Lighthouse de 100 sur un site riche en photographies.
+          </p>
+          <div class="insight-block" style="margin-top: 0;">
+            <p>Atteindre un Lighthouse 100 n'est pas un objectif de développeur — c'est une contrainte de conception. Cela implique des décisions dès la phase design : dimensions d'images définies à l'avance pour éviter le CLS, animations uniquement sur <code>transform</code> et <code>opacity</code>, aucun script bloquant.</p>
+          </div>
         </div>
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i></div>
-          <div class="tech-item-name">CSS3</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i></div>
-          <div class="tech-item-name">JavaScript</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-solid fa-cloud" style="color: #3448C5;"></i></div>
-          <div class="tech-item-name">Cloudinary</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-solid fa-rocket" style="color: #00C7B7;"></i></div>
-          <div class="tech-item-name">Netlify</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-solid fa-language" style="color: #6A8FB9;"></i></div>
-          <div class="tech-item-name">Custom i18n</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-brands fa-font-awesome" style="color: #528DD7;"></i></div>
-          <div class="tech-item-name">Font Awesome</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item-icon"><i class="fa-brands fa-google" style="color: #4285F4;"></i></div>
-          <div class="tech-item-name">Montserrat</div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="background: var(--gray-50); border-radius: 20px; padding: 32px; border: 1px solid var(--gray-200);">
+            <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gray-400); margin-bottom: 24px;">Stack technique</p>
+            <div class="tech-row" style="justify-content: flex-start; gap: 24px; flex-wrap: wrap;">
+              <div class="tech-item">
+                <div class="tech-item-icon"><i class="fa-brands fa-html5" style="color: #E34F26;"></i></div>
+                <div class="tech-item-name">HTML5</div>
+                <div class="tech-item-desc">Structure sémantique</div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-item-icon"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i></div>
+                <div class="tech-item-name">CSS3</div>
+                <div class="tech-item-desc">Custom Properties + clamp()</div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-item-icon"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i></div>
+                <div class="tech-item-name">JavaScript</div>
+                <div class="tech-item-desc">Vanilla, zéro framework</div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-item-icon"><i class="fa-solid fa-cloud" style="color: #3448C5;"></i></div>
+                <div class="tech-item-name">Cloudinary</div>
+                <div class="tech-item-desc">CDN + WebP + resize</div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-item-icon"><i class="fa-solid fa-rocket" style="color: #00C7B7;"></i></div>
+                <div class="tech-item-name">Netlify</div>
+                <div class="tech-item-desc">Deploy + Forms + CDN edge</div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-item-icon"><i class="fa-solid fa-language" style="color: #6A8FB9;"></i></div>
+                <div class="tech-item-name">i18n custom</div>
+                <div class="tech-item-desc">SSG + URL routing</div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-item-icon"><i class="fa-solid fa-map-location-dot" style="color: #1DA1F2;"></i></div>
+                <div class="tech-item-name">Mapbox GL</div>
+                <div class="tech-item-desc">Carte réseau interactive</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       i18n LANGUAGES
+       MULTILINGUE — ENJEU DE CONCEPTION GLOBALE
   ============================================ -->
   <section class="panel panel--gray">
-    <div class="container text-center">
-      <div class="reveal" style="margin-bottom: 48px;">
-        <span class="label">Internationalization</span>
-        <h2 class="section-title">One Site, Seven Languages</h2>
-        <p class="section-subtitle mx-auto">A custom-built modular translation system with culturally adapted copy for
-          each market. Each page has its own translation module for maintainability.</p>
-      </div>
-      <div class="i18n-flags reveal">
-        <div class="i18n-flag" title="Fran&ccedil;ais"><img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23002395' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23ED2939' x='2' width='1' height='2'/%3E%3C/svg%3E"
-            alt="FR"></div>
-        <div class="i18n-flag" title="English"><img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='a'%3E%3Cpath d='M0 0v30h60V0z'/%3E%3C/clipPath%3E%3CclipPath id='b'%3E%3Cpath d='M30 15h30v15zv15H0zH0V0zV0h30z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M0 0v30h60V0z' fill='%23012169'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' clip-path='url(%23b)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"
-            alt="EN"></div>
-        <div class="i18n-flag" title="Italiano"><img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23009246' width='1' height='2'/%3E%3Crect fill='%23fff' x='1' width='1' height='2'/%3E%3Crect fill='%23CE2B37' x='2' width='1' height='2'/%3E%3C/svg%3E"
-            alt="IT"></div>
-        <div class="i18n-flag" title="Espa&ntilde;ol"><img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23c60b1e' width='3' height='2'/%3E%3Crect fill='%23ffc400' y='.5' width='3' height='1'/%3E%3C/svg%3E"
-            alt="ES"></div>
-        <div class="i18n-flag" title="Portugu&ecirc;s"><img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect fill='%23006600' width='1.2' height='2'/%3E%3Crect fill='%23FF0000' x='1.2' width='1.8' height='2'/%3E%3C/svg%3E"
-            alt="PT"></div>
-        <div class="i18n-flag" title="Deutsch"><img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E%3Crect width='5' height='3' fill='%23FFCC00'/%3E%3Crect width='5' height='2' fill='%23DD0000'/%3E%3Crect width='5' height='1'/%3E%3C/svg%3E"
-            alt="DE"></div>
-        <div class="i18n-flag" title="Nederlands"><img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3E%3Crect fill='%2321468B' width='9' height='6'/%3E%3Crect fill='%23fff' width='9' height='4'/%3E%3Crect fill='%23AE1C28' width='9' height='2'/%3E%3C/svg%3E"
-            alt="NL"></div>
+    <div class="container">
+      <div class="two-col reveal">
+        <div class="two-col-content">
+          <span class="label">Multilingue</span>
+          <h3>Un enjeu d'architecture, pas un problème de traduction</h3>
+          <p>
+            Le choix des 7 langues n'est pas exhaustif, il est stratégique : français (marché domestique), anglais (lingua franca du tourisme international), italien (forte présence à Milan), espagnol, portugais, allemand et néerlandais — les bassins de clientèle des destinations où My Pretty Family est implanté. On ne couvre pas "le monde" : on couvre précisément les marchés correspondant aux lieux d'implantation.
+          </p>
+          <p>
+            La tentation naturelle est de faire du multilingue par injection JavaScript : une page unique, des traductions chargées à la volée. C'est simple à mettre en place, mais c'est une mauvaise architecture. Pourquoi ? Le contenu n'est pas crawlable par langue distincte (catastrophique pour le SEO international), il y a un flash de contenu non traduit au chargement, et les performances sont dégradées par le JavaScript bloquant.
+          </p>
+          <p>
+            J'ai opté pour une architecture SSG avec routage par URL : chaque langue génère ses propres fichiers HTML statiques accessibles sur des URLs dédiées (<code>/en/</code>, <code>/it/</code>, <code>/es/</code>…). Pas de JavaScript côté client pour les traductions, contenu crawlable par langue, performances maximales, et déclaration hreflang possible pour le SEO international.
+          </p>
+          <p>
+            Le sélecteur de langue répond à deux logiques selon le viewport : un dropdown en desktop, un popup bottom-sheet en mobile. Ce n'est pas juste du responsive — ce sont deux patterns d'interaction différents adaptés à deux contextes d'usage. Sur mobile, ouvrir un dropdown dans une navigation déjà en overlay crée des conflits d'interaction. Le popup résout ça proprement.
+          </p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center;">
+          <div style="background: var(--white); border-radius: 16px; padding: 32px; border: 1px solid var(--gray-200);">
+            <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gray-400); margin-bottom: 20px;">Langues & marchés cibles</p>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gray-100);">
+                <span style="font-size: 14px; font-weight: 600; color: var(--gray-800);">🇫🇷 Français</span>
+                <span style="font-size: 12px; color: var(--gray-500);">Marché domestique · Langue par défaut</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gray-100);">
+                <span style="font-size: 14px; font-weight: 600; color: var(--gray-800);">🇬🇧 English</span>
+                <span style="font-size: 12px; color: var(--gray-500);">Tourisme international</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gray-100);">
+                <span style="font-size: 14px; font-weight: 600; color: var(--gray-800);">🇮🇹 Italiano</span>
+                <span style="font-size: 12px; color: var(--gray-500);">Implantation Milan</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gray-100);">
+                <span style="font-size: 14px; font-weight: 600; color: var(--gray-800);">🇪🇸 Español</span>
+                <span style="font-size: 12px; color: var(--gray-500);">Clientèle touristique</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gray-100);">
+                <span style="font-size: 14px; font-weight: 600; color: var(--gray-800);">🇵🇹 Português</span>
+                <span style="font-size: 12px; color: var(--gray-500);">Clientèle touristique</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--gray-100);">
+                <span style="font-size: 14px; font-weight: 600; color: var(--gray-800);">🇩🇪 Deutsch</span>
+                <span style="font-size: 12px; color: var(--gray-500);">Clientèle touristique</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+                <span style="font-size: 14px; font-weight: 600; color: var(--gray-800);">🇳🇱 Nederlands</span>
+                <span style="font-size: 12px; color: var(--gray-500);">Clientèle touristique</span>
+              </div>
+            </div>
+          </div>
+          <div style="background: var(--primary); border-radius: 16px; padding: 24px;">
+            <p style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7;"><strong style="color: white;">Architecture SSG :</strong> 9 pages × 7 langues = 63 fichiers HTML statiques, chacun indexable indépendamment par les moteurs de recherche.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       DESIGN DETAILS — UI Components
+       FORMULAIRE & ÉLÉMENTS INTERACTIFS
   ============================================ -->
   <section class="panel panel--white">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 64px;">
-        <span class="label">Design System</span>
-        <h2 class="section-title">Crafted Components</h2>
-        <p class="section-subtitle mx-auto">Consistent UI patterns create a cohesive experience across all pages:
-          glassmorphism effects, pill-shaped CTAs, soft shadows, and rounded corners.</p>
+        <span class="label">Formulaire & Éléments interactifs</span>
+        <h2 class="section-title">Des composants pensés pour leur usage, pas pour leur apparence</h2>
+        <p class="section-subtitle mx-auto">Le formulaire de candidature franchise, la carte du réseau et la navigation mobile ne sont pas des ajouts — ce sont des éléments clés du dispositif de conversion.</p>
       </div>
 
       <!-- Component showcase cards -->
@@ -2227,9 +2745,8 @@
 
         <div class="component-card">
           <div class="component-header">
-            <h3>Interactive Elements</h3>
-            <p>Pill-shaped actionable elements utilizing animated gradients and deep soft shadows to drive conversion
-              flows.</p>
+            <h3>CTAs & éléments actionnables</h3>
+            <p>Deux niveaux de CTA hiérarchisés : primaire (gradient animé, ombre portée, conversion directe) et secondaire (outline, exploration). La forme pill renforce l'invitation à l'action et la différencie clairement du contenu informatif.</p>
           </div>
           <div class="component-preview">
             <div class="btn-preview-primary">
@@ -2247,9 +2764,8 @@
 
         <div class="component-card">
           <div class="component-header">
-            <h3>Navigational Elements</h3>
-            <p>Custom language switchers ensuring smooth global experience. Floating glassmorphism design adapted for
-              varying viewports.</p>
+            <h3>Sélecteur de langue</h3>
+            <p>Deux comportements distincts selon le viewport : dropdown en desktop, popup bottom-sheet en mobile. Ce ne sont pas deux versions du même composant — ce sont deux patterns d'interaction différents adaptés à deux contextes d'usage différents.</p>
           </div>
           <div class="component-preview" style="flex-direction: column; align-items: center; gap: 16px;">
             <div class="lang-selector"
@@ -2285,9 +2801,8 @@
         <div class="component-card" style="grid-column: 1 / -1; min-height: 500px; padding: 0;">
           <div class="component-header"
             style="position: absolute; top: 48px; left: 48px; max-width: 400px; background: rgba(255,255,255,0.9); padding: 24px; border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid var(--gray-200); z-index: 10;">
-            <h3>Network Map</h3>
-            <p>Interactive Mapbox integration allowing users to freely locate partner stores all around Europe in real
-              time. Showcased through screenshots of the original interface.</p>
+            <h3>Carte du réseau (Mapbox)</h3>
+            <p>Un même composant, deux lectures selon l'audience : pour le client, trouver le point de vente le plus proche. Pour le partenaire, visualiser la solidité et l'étendue du réseau. La preuve par la géographie.</p>
           </div>
           <img src="./map_screenshot.png" alt="Map Interface Preview"
             style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
@@ -2298,15 +2813,14 @@
   </section>
 
   <!-- ============================================
-       RESPONSIVE DESIGN SHOWCASE
+       RESPONSIVE — SECTION SEO INTRODUITE ICI
   ============================================ -->
   <section class="panel panel--gray">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom: 64px;">
-        <span class="label">Responsive</span>
-        <h2 class="section-title">Every Screen, Every Device</h2>
-        <p class="section-subtitle mx-auto">A fully responsive experience from 320px to 2560px &mdash; fluid typography,
-          adaptive grids, and touch-optimized interactions.</p>
+        <span class="label">Responsive design</span>
+        <h2 class="section-title">Mobile d'abord, parce que c'est le contexte réel</h2>
+        <p class="section-subtitle mx-auto">La typographie est fluide via <code>CSS clamp()</code>. Les grilles s'adaptent sans rupture. La navigation mobile est un composant à part entière, conçu pour un usage tactile dans un contexte de mobilité.</p>
       </div>
 
       <div class="reveal"
@@ -2419,17 +2933,127 @@
   </section>
 
   <!-- ============================================
-       RESULTS / CTA
+       SEO INTÉGRÉ À LA CONCEPTION
+  ============================================ -->
+  <section class="panel panel--white">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 64px;">
+        <span class="label">SEO</span>
+        <h2 class="section-title">Le SEO comme conséquence d'une bonne structure</h2>
+        <p class="section-subtitle mx-auto">Je ne considère pas le SEO comme une couche à ajouter après le design. C'est une contrainte de conception qui traverse les décisions de structure, de contenu et de performance depuis le début.</p>
+      </div>
+      <div class="seo-grid reveal">
+        <div class="seo-card">
+          <div class="seo-icon"><i class="fa-solid fa-code"></i></div>
+          <h4>Structure sémantique</h4>
+          <p>Un seul H1 par page, hiérarchie de titres respectée (H2 → H3), sections HTML5 sémantiques (nav, main, footer), attributs alt contextuels sur toutes les images. Le balisage donne du sens au contenu au-delà de sa présentation visuelle — et les moteurs de recherche le lisent.</p>
+        </div>
+        <div class="seo-card">
+          <div class="seo-icon"><i class="fa-solid fa-earth-europe"></i></div>
+          <h4>Architecture multilingue indexable</h4>
+          <p>Chaque langue génère des URLs dédiées (/en/, /it/…) indexables indépendamment. Les balises hreflang déclarent les relations entre pages linguistiques, permettant aux moteurs de recherche de servir la bonne version selon la localisation de l'utilisateur. Une traduction JS injectée n'aurait rien de cela.</p>
+        </div>
+        <div class="seo-card">
+          <div class="seo-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h4>Performance = avantage SEO</h4>
+          <p>Les Core Web Vitals (LCP, CLS, FID) sont des signaux de ranking depuis 2021. Un score Lighthouse de 100 n'est pas de la vanité : c'est un avantage concurrentiel direct. Les images ont des dimensions explicites (pas de CLS), le CSS critique est inline, les fonts sont préchargées, les animations ne touchent pas au layout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       DIFFICULTÉS, ARBITRAGES, DÉCISIONS
+  ============================================ -->
+  <section class="panel panel--gray">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 64px;">
+        <span class="label">Difficultés & Arbitrages</span>
+        <h2 class="section-title">Les tensions qui ont façonné les décisions</h2>
+        <p class="section-subtitle mx-auto">Un projet sans tensions n'est pas un projet complexe. Ces trois arbitrages résument les choix les plus structurants — ceux où il n'y avait pas de réponse évidente.</p>
+      </div>
+      <div class="arbitrage-grid reveal">
+        <div class="arbitrage-card">
+          <span class="arbitrage-tag"><i class="fa-solid fa-scale-balanced"></i> Arbitrage 01</span>
+          <h3>Émotion vs Performance</h3>
+          <p class="arbitrage-card-problem">
+            My Pretty Family est une marque visuelle. L'expérience repose sur des images fortes : portraits colorés, familles souriantes, ambiances de stand. Le réflexe naturel est de mettre des images partout, grandes et impactantes. Mais des images non optimisées tuent les performances, et des performances dégradées nuisent au SEO et à la conversion — surtout sur mobile avec un réseau 4G variable en zone touristique.
+          </p>
+          <div class="arbitrage-solution">
+            <div class="arbitrage-solution-label">Décision</div>
+            <p>Ne jamais faire de compromis sur la qualité visuelle — mais ne jamais ignorer les contraintes techniques. Toutes les images passent par Cloudinary avec conversion WebP automatique et redimensionnement adaptatif. Les dimensions sont définies à l'avance pour éviter le CLS. Le hero utilise une image en CSS background (pas une balise img) pour limiter l'impact sur le LCP. La galerie utilise le lazy loading. Résultat : un site visuellement riche avec un score Lighthouse de 100.</p>
+          </div>
+        </div>
+        <div class="arbitrage-card">
+          <span class="arbitrage-tag"><i class="fa-solid fa-scale-balanced"></i> Arbitrage 02</span>
+          <h3>Double audience sur un site unique</h3>
+          <p class="arbitrage-card-problem">
+            La solution "évidente" est de créer deux entrées distinctes — une pour les clients, une pour les partenaires. C'est aussi la moins bonne. Elle oblige l'utilisateur à se qualifier lui-même dès son arrivée, ce qui crée une friction inutile et rate la dynamique émotionnelle qui convainc les deux audiences. Un partenaire convaincu par la force de la marque avant de lire les chiffres est un partenaire mieux qualifié.
+          </p>
+          <div class="arbitrage-solution">
+            <div class="arbitrage-solution-label">Décision</div>
+            <p>Architecture "entonnoir commun, sorties différenciées" : tout le monde entre par la même homepage, qui joue le registre émotionnel en premier. Ensuite, les CTAs divergent naturellement selon l'intention — la position dans la page, le texte du bouton, la destination. Cette approche est plus subtile à concevoir, mais bien plus efficace à l'usage : elle ne fragmente pas le trafic, elle le qualifie progressivement.</p>
+          </div>
+        </div>
+        <div class="arbitrage-card">
+          <span class="arbitrage-tag"><i class="fa-solid fa-scale-balanced"></i> Arbitrage 03</span>
+          <h3>Multilingue sans CMS — gérer la complexité à long terme</h3>
+          <p class="arbitrage-card-problem">
+            9 pages × 7 langues = 63 ensembles de contenus à gérer sans système de gestion centralisé. La tentation est de tout regrouper dans un gros fichier JSON de traductions. C'est simple au départ, mais fragile à l'usage : le fichier grossit indéfiniment, les collisions de clés augmentent, retrouver un texte spécifique devient laborieux, et tout changement de structure oblige à modifier un fichier monolithique.
+          </p>
+          <div class="arbitrage-solution">
+            <div class="arbitrage-solution-label">Décision</div>
+            <p>Modularité par page : chaque page possède son propre module de traductions, chargé uniquement si nécessaire. La base commune (navigation, footer, labels génériques) est centralisée. Les contenus spécifiques à chaque page sont isolés. Ce pattern assure une maintenabilité à long terme, facilite l'onboarding d'un autre développeur, et permet d'ajouter ou modifier une langue sans risquer de casser les autres.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CE QUE CE PROJET DIT DE MA FAÇON DE TRAVAILLER
+  ============================================ -->
+  <section class="panel panel--gradient">
+    <div class="container">
+      <div class="reveal" style="max-width: 760px; margin-bottom: 48px;">
+        <span class="label label--light">Bilan</span>
+        <h2 class="section-title section-title--white">Ce que ce projet dit de ma façon de travailler</h2>
+        <p class="section-subtitle section-subtitle--white">
+          Ce projet illustre une approche qui refuse la séparation entre design et développement, entre esthétique et stratégie, entre performance et émotion. Chaque décision — technique, visuelle ou structurelle — répond à une logique que je peux expliciter.
+        </p>
+      </div>
+      <div class="reflection-grid reveal">
+        <div class="reflection-point">
+          <h4>Pensée systémique</h4>
+          <p>Chaque décision est reliée aux autres. La couleur de la typographie n'est pas séparée de l'accessibilité (contraste = ranking SEO). La structure des pages n'est pas séparée des parcours utilisateurs. Le multilingue n'est pas séparé de l'architecture d'URL. Tout est cohérent parce que tout a été pensé ensemble.</p>
+        </div>
+        <div class="reflection-point">
+          <h4>Rigueur technique sans sacrifier l'émotion</h4>
+          <p>Un Lighthouse 100 sur un site qui ne soit pas visuellement aride. La performance n'est pas l'ennemi de l'émotion — c'est une contrainte qui oblige à être plus intelligent sur les choix techniques. Cloudinary, SSG, vanilla JS : chaque outil a été choisi parce qu'il résout un problème réel, pas par habitude.</p>
+        </div>
+        <div class="reflection-point">
+          <h4>Décisions justifiées, pas instinctives</h4>
+          <p>Je ne fais pas de choix par esthétisme ou par convention. Pourquoi Montserrat et pas une autre typo ? Pourquoi SSG et pas SPA ? Pourquoi 4 liens dans la nav et pas 6 ? Chaque réponse existe, chaque décision a une logique. C'est ce qui permet de défendre ses choix et de les faire évoluer si les contraintes changent.</p>
+        </div>
+        <div class="reflection-point">
+          <h4>Ownership total sans dispersion</h4>
+          <p>Je prends en charge l'ensemble du périmètre quand c'est ce dont le projet a besoin — pas pour "être full-stack", mais parce que la cohérence naît de la continuité entre conception et exécution. Je sais aussi identifier ce que je déléguerais dans un contexte plus structuré : content strategy avancé, motion design, tests utilisateurs formels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONCLUSION / BILAN
   ============================================ -->
   <section class="result-section">
     <div class="container reveal">
-      <h2>The Result</h2>
+      <h2>Un système, pas un site</h2>
       <p>
-        A fast, emotional, and conversion-focused website that captures the warmth of the My Pretty Family experience —
-        across 7 languages and every screen size.
+        myprettyfamily.com n'est pas une vitrine. C'est un système web construit pour répondre à des objectifs précis : toucher deux audiences simultanément, fonctionner en sept langues, performer sur mobile dans des conditions variables, et convertir des visiteurs en partenaires qualifiés.
       </p>
       <a href="https://myprettyfamily.com" target="_blank" class="result-btn">
-        Visit Live Site
+        Voir le site live
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
           stroke-linejoin="round">
           <path d="m5 12h14" />
@@ -2443,7 +3067,7 @@
        FOOTER
   ============================================ -->
   <footer class="case-footer">
-    <p>&copy; 2025 &mdash; <span>My Pretty Family</span> — Project Presentation</p>
+    <p>&copy; 2025 &mdash; Case Study <span>My Pretty Family</span> — Conception & Développement complet</p>
   </footer>
 
   <!-- ============================================
